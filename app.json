@@ -33,7 +33,14 @@
     },
     "web": {
       "favicon": "./assets/favicon.png",
-      "bundler": "metro"
+      "bundler": "metro",
+      "backgroundColor": "#121212",
+      "themeColor": "#121212",
+      "name": "FIFA Queue",
+      "shortName": "FIFA Queue",
+      "description": "Office FIFA matchmaking & ELO rankings",
+      "display": "standalone",
+      "orientation": "portrait"
     },
     "plugins": [
       "expo-router",
