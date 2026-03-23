@@ -1,14 +1,12 @@
--- Enable UUID extension
-create extension if not exists "uuid-ossp";
-create extension if not exists "pg_cron";
-create extension if not exists "pg_net";
+-- Enable extensions (pg_cron and pg_net may not be available on all plans)
+-- gen_random_uuid() is built-in to Postgres 13+
 
 -- ============================================================
 -- Tables
 -- ============================================================
 
 create table players (
-  id uuid primary key default uuid_generate_v4(),
+  id uuid primary key default gen_random_uuid(),
   google_id text unique not null,
   name text not null,
   avatar_url text,
@@ -19,14 +17,14 @@ create table players (
 );
 
 create table seasons (
-  id uuid primary key default uuid_generate_v4(),
+  id uuid primary key default gen_random_uuid(),
   name text not null,
   started_at timestamptz default now(),
   ended_at timestamptz
 );
 
 create table queue_entries (
-  id uuid primary key default uuid_generate_v4(),
+  id uuid primary key default gen_random_uuid(),
   player_id uuid references players(id) not null,
   season_id uuid references seasons(id) not null,
   date date not null default current_date,
@@ -36,7 +34,7 @@ create table queue_entries (
 );
 
 create table games (
-  id uuid primary key default uuid_generate_v4(),
+  id uuid primary key default gen_random_uuid(),
   season_id uuid references seasons(id) not null,
   date date not null default current_date,
   started_at timestamptz default now(),
@@ -45,7 +43,7 @@ create table games (
 );
 
 create table game_players (
-  id uuid primary key default uuid_generate_v4(),
+  id uuid primary key default gen_random_uuid(),
   game_id uuid references games(id) not null,
   player_id uuid references players(id) not null,
   team integer not null check (team in (1, 2)),
@@ -54,7 +52,7 @@ create table game_players (
 );
 
 create table game_results (
-  id uuid primary key default uuid_generate_v4(),
+  id uuid primary key default gen_random_uuid(),
   game_id uuid references games(id) unique not null,
   team1_goals integer not null,
   team2_goals integer not null,
@@ -63,7 +61,7 @@ create table game_results (
 );
 
 create table elo_history (
-  id uuid primary key default uuid_generate_v4(),
+  id uuid primary key default gen_random_uuid(),
   player_id uuid references players(id) not null,
   game_id uuid references games(id) not null,
   elo_before integer not null,
