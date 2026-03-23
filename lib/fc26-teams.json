@@ -1,0 +1,3968 @@
+[
+  {
+    "name": "Paris Saint-Germain",
+    "league": "Ligue 1",
+    "ovr": 85,
+    "stars": 5
+  },
+  {
+    "name": "FC Barcelona",
+    "league": "La Liga",
+    "ovr": 85,
+    "stars": 5
+  },
+  {
+    "name": "Arsenal",
+    "league": "Premier League",
+    "ovr": 84,
+    "stars": 5
+  },
+  {
+    "name": "Liverpool",
+    "league": "Premier League",
+    "ovr": 84,
+    "stars": 5
+  },
+  {
+    "name": "Manchester City",
+    "league": "Premier League",
+    "ovr": 84,
+    "stars": 5
+  },
+  {
+    "name": "FC Bayern München",
+    "league": "Bundesliga",
+    "ovr": 84,
+    "stars": 5
+  },
+  {
+    "name": "Real Madrid",
+    "league": "La Liga",
+    "ovr": 84,
+    "stars": 5
+  },
+  {
+    "name": "Inter",
+    "league": "Serie A",
+    "ovr": 83,
+    "stars": 5
+  },
+  {
+    "name": "Atlético Madrid",
+    "league": "La Liga",
+    "ovr": 82,
+    "stars": 4.5
+  },
+  {
+    "name": "Aston Villa",
+    "league": "Premier League",
+    "ovr": 81,
+    "stars": 4.5
+  },
+  {
+    "name": "Chelsea",
+    "league": "Premier League",
+    "ovr": 81,
+    "stars": 4.5
+  },
+  {
+    "name": "Newcastle United",
+    "league": "Premier League",
+    "ovr": 81,
+    "stars": 4.5
+  },
+  {
+    "name": "Tottenham Hotspur",
+    "league": "Premier League",
+    "ovr": 81,
+    "stars": 4.5
+  },
+  {
+    "name": "Borussia Dortmund",
+    "league": "Bundesliga",
+    "ovr": 81,
+    "stars": 4.5
+  },
+  {
+    "name": "AC Milan",
+    "league": "Serie A",
+    "ovr": 81,
+    "stars": 4.5
+  },
+  {
+    "name": "Napoli",
+    "league": "Serie A",
+    "ovr": 81,
+    "stars": 4.5
+  },
+  {
+    "name": "Manchester United",
+    "league": "Premier League",
+    "ovr": 80,
+    "stars": 4.5
+  },
+  {
+    "name": "Juventus",
+    "league": "Serie A",
+    "ovr": 80,
+    "stars": 4.5
+  },
+  {
+    "name": "Roma",
+    "league": "Serie A",
+    "ovr": 80,
+    "stars": 4.5
+  },
+  {
+    "name": "Galatasaray SK",
+    "league": "Süper Lig",
+    "ovr": 80,
+    "stars": 4.5
+  },
+  {
+    "name": "Athletic Club",
+    "league": "La Liga",
+    "ovr": 80,
+    "stars": 4.5
+  },
+  {
+    "name": "Crystal Palace",
+    "league": "Premier League",
+    "ovr": 79,
+    "stars": 4
+  },
+  {
+    "name": "Nottingham Forest",
+    "league": "Premier League",
+    "ovr": 79,
+    "stars": 4
+  },
+  {
+    "name": "Bayer 04 Leverkusen",
+    "league": "Bundesliga",
+    "ovr": 79,
+    "stars": 4
+  },
+  {
+    "name": "Atalanta",
+    "league": "Serie A",
+    "ovr": 79,
+    "stars": 4
+  },
+  {
+    "name": "RB Leipzig",
+    "league": "Bundesliga",
+    "ovr": 79,
+    "stars": 4
+  },
+  {
+    "name": "Real Betis Balompié",
+    "league": "La Liga",
+    "ovr": 79,
+    "stars": 4
+  },
+  {
+    "name": "Olympique de Marseille",
+    "league": "Ligue 1",
+    "ovr": 79,
+    "stars": 4
+  },
+  {
+    "name": "Villarreal CF",
+    "league": "La Liga",
+    "ovr": 79,
+    "stars": 4
+  },
+  {
+    "name": "Sporting CP",
+    "league": "Primeira Liga",
+    "ovr": 79,
+    "stars": 4
+  },
+  {
+    "name": "Everton",
+    "league": "Premier League",
+    "ovr": 78,
+    "stars": 4
+  },
+  {
+    "name": "Brighton & Hove Albion",
+    "league": "Premier League",
+    "ovr": 78,
+    "stars": 4
+  },
+  {
+    "name": "Eintracht Frankfurt",
+    "league": "Bundesliga",
+    "ovr": 78,
+    "stars": 4
+  },
+  {
+    "name": "Lazio",
+    "league": "Serie A",
+    "ovr": 78,
+    "stars": 4
+  },
+  {
+    "name": "AS Monaco",
+    "league": "Ligue 1",
+    "ovr": 78,
+    "stars": 4
+  },
+  {
+    "name": "Fenerbahçe SK",
+    "league": "Süper Lig",
+    "ovr": 78,
+    "stars": 4
+  },
+  {
+    "name": "Al Hilal",
+    "league": "Pro League",
+    "ovr": 78,
+    "stars": 4
+  },
+  {
+    "name": "Brentford",
+    "league": "Premier League",
+    "ovr": 78,
+    "stars": 4
+  },
+  {
+    "name": "Fulham FC",
+    "league": "Premier League",
+    "ovr": 78,
+    "stars": 4
+  },
+  {
+    "name": "AFC Bournemouth",
+    "league": "Premier League",
+    "ovr": 78,
+    "stars": 4
+  },
+  {
+    "name": "SL Benfica",
+    "league": "Primeira Liga",
+    "ovr": 78,
+    "stars": 4
+  },
+  {
+    "name": "FC Porto",
+    "league": "Primeira Liga",
+    "ovr": 78,
+    "stars": 4
+  },
+  {
+    "name": "West Ham United",
+    "league": "Premier League",
+    "ovr": 77,
+    "stars": 4
+  },
+  {
+    "name": "VfB Stuttgart",
+    "league": "Bundesliga",
+    "ovr": 77,
+    "stars": 4
+  },
+  {
+    "name": "Olympique Lyonnais",
+    "league": "Ligue 1",
+    "ovr": 77,
+    "stars": 4
+  },
+  {
+    "name": "Sunderland",
+    "league": "Premier League",
+    "ovr": 77,
+    "stars": 4
+  },
+  {
+    "name": "Real Sociedad",
+    "league": "La Liga",
+    "ovr": 77,
+    "stars": 4
+  },
+  {
+    "name": "CA Osasuna",
+    "league": "La Liga",
+    "ovr": 77,
+    "stars": 4
+  },
+  {
+    "name": "Rayo Vallecano",
+    "league": "La Liga",
+    "ovr": 77,
+    "stars": 4
+  },
+  {
+    "name": "Girona FC",
+    "league": "La Liga",
+    "ovr": 77,
+    "stars": 4
+  },
+  {
+    "name": "PSV",
+    "league": "Eredivisie",
+    "ovr": 77,
+    "stars": 4
+  },
+  {
+    "name": "Leeds United",
+    "league": "Premier League",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "Al Nassr",
+    "league": "Pro League",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "Flamengo",
+    "league": "Série A",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "Olympiacos FC",
+    "league": "Super League",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "Fiorentina",
+    "league": "Serie A",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "TSG 1899 Hoffenheim",
+    "league": "Bundesliga",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "RC Lens",
+    "league": "Ligue 1",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "Lille OSC",
+    "league": "Ligue 1",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "Stade Rennais FC",
+    "league": "Ligue 1",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "VfL Wolfsburg",
+    "league": "Bundesliga",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "Bologna",
+    "league": "Serie A",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "RC Celta",
+    "league": "La Liga",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "RCD Espanyol",
+    "league": "La Liga",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "RCD Mallorca",
+    "league": "La Liga",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "Valencia CF",
+    "league": "La Liga",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "Como",
+    "league": "Serie A",
+    "ovr": 76,
+    "stars": 3.5
+  },
+  {
+    "name": "Burnley",
+    "league": "Premier League",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "Botafogo",
+    "league": "Série A",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "SK Slavia Praha",
+    "league": "První liga",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "Atlético Mineiro",
+    "league": "Série A",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "AEK Athens",
+    "league": "Super League",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "Borussia Mönchengladbach",
+    "league": "Bundesliga",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "SC Freiburg",
+    "league": "Bundesliga",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "SV Werder Bremen",
+    "league": "Bundesliga",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "1. FC Union Berlin",
+    "league": "Bundesliga",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "Torino",
+    "league": "Serie A",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "Getafe CF",
+    "league": "La Liga",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "Beşiktaş JK",
+    "league": "Süper Lig",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "OGC Nice",
+    "league": "Ligue 1",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "RC Strasbourg Alsace",
+    "league": "Ligue 1",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "Celtic",
+    "league": "Premiership",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "River Plate",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "Boca Juniors",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "Wolverhampton Wanderers",
+    "league": "Premier League",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "Palmeiras",
+    "league": "Série A",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "1. FSV Mainz 05",
+    "league": "Bundesliga",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "Sevilla FC",
+    "league": "La Liga",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "Ajax",
+    "league": "Eredivisie",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "Feyenoord",
+    "league": "Eredivisie",
+    "ovr": 75,
+    "stars": 3.5
+  },
+  {
+    "name": "Al Ahli SFC",
+    "league": "Pro League",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Al Qadsiah FC",
+    "league": "Pro League",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Internacional",
+    "league": "Série A",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Hamburger SV",
+    "league": "Bundesliga",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "1. FC Köln",
+    "league": "Bundesliga",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "FC Augsburg",
+    "league": "Bundesliga",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Levante UD",
+    "league": "La Liga",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Al Ittihad",
+    "league": "Pro League",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Sassuolo",
+    "league": "Serie A",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Sporting Clube de Braga",
+    "league": "Primeira Liga",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Stade Brestois 29",
+    "league": "Ligue 1",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "PAOK",
+    "league": "Super League",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Paris FC",
+    "league": "Ligue 1",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Deportivo Alavés",
+    "league": "La Liga",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Elche CF",
+    "league": "La Liga",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Racing Club",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Union Saint-Gilloise",
+    "league": "Pro League",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Club Brugge KV",
+    "league": "Pro League",
+    "ovr": 74,
+    "stars": 3.5
+  },
+  {
+    "name": "Sparta Praha",
+    "league": "První liga",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Corinthians",
+    "league": "Série A",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Toulouse FC",
+    "league": "Ligue 1",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Parma",
+    "league": "Serie A",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Cagliari",
+    "league": "Serie A",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Udinese",
+    "league": "Serie A",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Cremonese",
+    "league": "Serie A",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Rangers FC",
+    "league": "Premiership",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "São Paulo",
+    "league": "Série A",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Panathinaikos FC",
+    "league": "Super League",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Ipswich Town",
+    "league": "Championship",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "AZ Alkmaar",
+    "league": "Eredivisie",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "KRC Genk",
+    "league": "Pro League",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Trabzonspor",
+    "league": "Süper Lig",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Hellas Verona FC",
+    "league": "Serie A",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Estudiantes de La Plata",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Genoa",
+    "league": "Serie A",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Vélez Sarsfield",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Real Oviedo",
+    "league": "La Liga",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Rosario Central",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 73,
+    "stars": 3
+  },
+  {
+    "name": "Sheffield United",
+    "league": "Championship",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Coventry City",
+    "league": "Championship",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Southampton",
+    "league": "Championship",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "FC København",
+    "league": "Superliga",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Palermo FC",
+    "league": "Serie B",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Fluminense",
+    "league": "Série A",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Cruzeiro",
+    "league": "Série A",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "AJ Auxerre",
+    "league": "Ligue 1",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Lanús",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Bahia",
+    "league": "Série A",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "UD Almería",
+    "league": "La Liga 2",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "FC Nantes",
+    "league": "Ligue 1",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Birmingham City",
+    "league": "Championship",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Grêmio",
+    "league": "Série A",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "FC Utrecht",
+    "league": "Eredivisie",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "NEC Nijmegen",
+    "league": "Eredivisie",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "1. FC Heidenheim 1846",
+    "league": "Bundesliga",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Viktoria Plzeň",
+    "league": "První liga",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Pisa",
+    "league": "Serie A",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Medipol Başakşehir FK",
+    "league": "Süper Lig",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Argentinos Juniors",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Dynamo Kyiv",
+    "league": "Premier League",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Shakhtar Donetsk",
+    "league": "Premier League",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Monza",
+    "league": "Serie B",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Le Havre AC",
+    "league": "Ligue 1",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Dinamo Zagreb",
+    "league": "Hrvatska nogometna liga",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "UD Las Palmas",
+    "league": "La Liga 2",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "FC Lorient",
+    "league": "Ligue 1",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "RSC Anderlecht",
+    "league": "Pro League",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Atlético Nacional",
+    "league": "Categoría Primera A",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "FC St. Pauli",
+    "league": "Bundesliga",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Angers SCO",
+    "league": "Ligue 1",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Inter Miami",
+    "league": "Major League Soccer",
+    "ovr": 72,
+    "stars": 3
+  },
+  {
+    "name": "Middlesbrough",
+    "league": "Championship",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Independiente",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Talleres",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "FC Schalke 04",
+    "league": "2. Bundesliga",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Sampdoria",
+    "league": "Serie B",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "FC Metz",
+    "league": "Ligue 1",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Hearts",
+    "league": "Premiership",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Ferencvárosi Torna Club",
+    "league": "Nemzeti Bajnokság I",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Lecce",
+    "league": "Serie A",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Leicester City",
+    "league": "Championship",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Millwall FC",
+    "league": "Championship",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Los Angeles FC",
+    "league": "Major League Soccer",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "FC Twente",
+    "league": "Eredivisie",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Bristol City",
+    "league": "Championship",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "FC Basel 1893",
+    "league": "Super League",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "BSC Young Boys",
+    "league": "Super League",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "FK Bodø/Glimt",
+    "league": "Eliteserien",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Wrexham",
+    "league": "Championship",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Hull City",
+    "league": "Championship",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Famalicão",
+    "league": "Primeira Liga",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Belgrano de Córdoba",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Fortaleza",
+    "league": "Série A",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Samsunspor",
+    "league": "Süper Lig",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "FC Midtjylland",
+    "league": "Superliga",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "RC Deportivo de La Coruña",
+    "league": "La Liga 2",
+    "ovr": 71,
+    "stars": 2.5
+  },
+  {
+    "name": "Norwich City",
+    "league": "Championship",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Watford",
+    "league": "Championship",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Hajduk Split",
+    "league": "Hrvatska nogometna liga",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Preston North End",
+    "league": "Championship",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Brøndby IF",
+    "league": "Superliga",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Stoke City",
+    "league": "Championship",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Queens Park Rangers",
+    "league": "Championship",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Aarhus Gymnastikforening",
+    "league": "Superliga",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "AS Saint-Étienne",
+    "league": "Ligue 2",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "GD Estoril Praia",
+    "league": "Primeira Liga",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Seattle Sounders FC",
+    "league": "Major League Soccer",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "FC Lugano",
+    "league": "Super League",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Platense",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Vasco da Gama",
+    "league": "Série A",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Cerro Porteño",
+    "league": "División Profesional",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Casa Pia",
+    "league": "Primeira Liga",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Derby County",
+    "league": "Championship",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Defensa y Justicia",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Huracán",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Atlético Bucaramanga",
+    "league": "Categoría Primera A",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Lech Poznań",
+    "league": "Ekstraklasa",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Instituto Atlético Central Córdoba",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "West Bromwich Albion",
+    "league": "Championship",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "VfL Bochum 1848",
+    "league": "2. Bundesliga",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "KAA Gent",
+    "league": "Pro League",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Alianza Lima",
+    "league": "Liga 1",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Hertha BSC",
+    "league": "2. Bundesliga",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "SV Darmstadt 98",
+    "league": "2. Bundesliga",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Swansea City",
+    "league": "Championship",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Konyaspor",
+    "league": "Süper Lig",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Chicago Fire",
+    "league": "Major League Soccer",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Universidad de Chile",
+    "league": "Primera Division",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "LA Galaxy",
+    "league": "Major League Soccer",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Houston Dynamo",
+    "league": "Major League Soccer",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Real Sporting de Gijón",
+    "league": "La Liga 2",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Venezia",
+    "league": "Serie B",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Charlotte FC",
+    "league": "Major League Soccer",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "NEOM SC",
+    "league": "Pro League",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Hannover 96",
+    "league": "2. Bundesliga",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Royal Antwerp FC",
+    "league": "Pro League",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Standard de Liège",
+    "league": "Pro League",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "América de Cali",
+    "league": "Categoría Primera A",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Kasımpaşa SK",
+    "league": "Süper Lig",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Club Olimpia",
+    "league": "División Profesional",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "San Lorenzo de Almagro",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Peñarol",
+    "league": "Primera División",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Vancouver Whitecaps FC",
+    "league": "Major League Soccer",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "FC Cincinnati",
+    "league": "Major League Soccer",
+    "ovr": 70,
+    "stars": 2.5
+  },
+  {
+    "name": "Blackburn Rovers",
+    "league": "Championship",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Al Taawoun FC",
+    "league": "Pro League",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Go Ahead Eagles",
+    "league": "Eredivisie",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "CD Leganés",
+    "league": "La Liga 2",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "1. FC Kaiserslautern",
+    "league": "2. Bundesliga",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Minnesota United FC",
+    "league": "Major League Soccer",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Portland Timbers",
+    "league": "Major League Soccer",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "APOEL FC",
+    "league": "1. Division",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Karlsruher SC",
+    "league": "2. Bundesliga",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Viking FK",
+    "league": "Eliteserien",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Fortuna Düsseldorf",
+    "league": "2. Bundesliga",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Widzew Łódź",
+    "league": "Ekstraklasa",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Al Shabab",
+    "league": "Pro League",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Holstein Kiel",
+    "league": "2. Bundesliga",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Cesena FC",
+    "league": "Serie B",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Servette FC",
+    "league": "Super League",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Club Atlético Sarmiento",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Córdoba CF",
+    "league": "La Liga 2",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Al Ain",
+    "league": "Pro League",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Charlton Athletic",
+    "league": "Championship",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Atlético Tucumán",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Burgos CF",
+    "league": "La Liga 2",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Vitória SC",
+    "league": "Primeira Liga",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Gil Vicente FC",
+    "league": "Primeira Liga",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "CD Nacional",
+    "league": "Primeira Liga",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Tigre",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Club Atlético Unión",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Stade de Reims",
+    "league": "Ligue 2",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Universidad Católica",
+    "league": "Primera Division",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "FC Arouca",
+    "league": "Primeira Liga",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "KV Mechelen",
+    "league": "Pro League",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Barracas Central",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Raków Częstochowa",
+    "league": "Ekstraklasa",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Jagiellonia Białystok",
+    "league": "Ekstraklasa",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Kayserispor",
+    "league": "Süper Lig",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Royal Charleroi Sporting Club",
+    "league": "Pro League",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Santa Clara",
+    "league": "Primeira Liga",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Oxford United",
+    "league": "Championship",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Libertad",
+    "league": "División Profesional",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Göztepe SK",
+    "league": "Süper Lig",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Universitario de Deportes",
+    "league": "Liga 1",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Sint-Truidense VV",
+    "league": "Pro League",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Kocaelispor",
+    "league": "Süper Lig",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Independiente Rivadavia",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Çaykur Rizespor",
+    "league": "Süper Lig",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Columbus Crew",
+    "league": "Major League Soccer",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Cádiz CF",
+    "league": "La Liga 2",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Vitória",
+    "league": "Série A",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Gaziantep FK",
+    "league": "Süper Lig",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "New York City FC",
+    "league": "Major League Soccer",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "FC Red Bull Salzburg",
+    "league": "Bundesliga",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Jeonbuk Hyundai Motors",
+    "league": "K League 1",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Racing Santander",
+    "league": "La Liga 2",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Real Valladolid CF",
+    "league": "La Liga 2",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Modena",
+    "league": "Serie B",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Empoli",
+    "league": "Serie B",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "SD Eibar",
+    "league": "La Liga 2",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "FC Seoul",
+    "league": "K League 1",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Real Salt Lake",
+    "league": "Major League Soccer",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Club Nacional de Football",
+    "league": "Primera División",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Orlando City SC",
+    "league": "Major League Soccer",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Qarabağ FK",
+    "league": "Premyer Liqa",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Rio Ave FC",
+    "league": "Primeira Liga",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Austin FC",
+    "league": "Major League Soccer",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Once Caldas",
+    "league": "Categoría Primera A",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Nashville SC",
+    "league": "Major League Soccer",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Al Khaleej",
+    "league": "Pro League",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Real Zaragoza",
+    "league": "La Liga 2",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Atlanta United",
+    "league": "Major League Soccer",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Alanyaspor",
+    "league": "Süper Lig",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Oud-Heverlee Leuven",
+    "league": "Pro League",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "SK Rapid",
+    "league": "Bundesliga",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Portsmouth",
+    "league": "Championship",
+    "ovr": 69,
+    "stars": 2.5
+  },
+  {
+    "name": "Independiente del Valle",
+    "league": "Serie A",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Fatih Karagümrük",
+    "league": "Süper Lig",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Sparta Rotterdam",
+    "league": "Eredivisie",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Rosenborg BK",
+    "league": "Eliteserien",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "SC Paderborn 07",
+    "league": "2. Bundesliga",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Universitatea Craiova",
+    "league": "Liga I",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Rapid Bucuresti",
+    "league": "Liga I",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "SSC Bari",
+    "league": "Serie B",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Newell's Old Boys",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Catanzaro",
+    "league": "Serie B",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Málaga CF",
+    "league": "La Liga 2",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Albacete Balompié",
+    "league": "La Liga 2",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Malmö FF",
+    "league": "Allsvenskan",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Calcio Padova",
+    "league": "Serie B",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "SV Elversberg",
+    "league": "2. Bundesliga",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "CA Banfield",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Montpellier HSC",
+    "league": "Ligue 2",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Aberdeen",
+    "league": "Premiership",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Legia Warszawa",
+    "league": "Ekstraklasa",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Hibernian",
+    "league": "Premiership",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "CA Aldosivi",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Moreirense FC",
+    "league": "Primeira Liga",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Carrarese",
+    "league": "Serie B",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Südtirol",
+    "league": "Serie B",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "San Diego FC",
+    "league": "Major League Soccer",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Bolívar",
+    "league": "División de Fútbol Profesional",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "SC Heerenveen",
+    "league": "Eredivisie",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Fortuna Sittard",
+    "league": "Eredivisie",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "St. Louis CITY SC",
+    "league": "Major League Soccer",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "FC St. Gallen 1879",
+    "league": "Super League",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Luton Town",
+    "league": "League One",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "CD Tondela",
+    "league": "Primeira Liga",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Barcelona de Guayaquil",
+    "league": "Serie A",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "LDU Quito",
+    "league": "Serie A",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Dinamo Bucureşti",
+    "league": "Liga I",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Spezia",
+    "league": "Serie B",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Universidad Católica del Ecuador",
+    "league": "Serie A",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "FCSB",
+    "league": "Liga I",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Pogoń Szczecin",
+    "league": "Ekstraklasa",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "SV Zulte Waregem",
+    "league": "Pro League",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "DSC Arminia Bielefeld",
+    "league": "2. Bundesliga",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Molde FK",
+    "league": "Eliteserien",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Gençlerbirliği SK",
+    "league": "Süper Lig",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Górnik Zabrze",
+    "league": "Ekstraklasa",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Cultural Leonesa",
+    "league": "La Liga 2",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Sporting Cristal",
+    "league": "Liga 1",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "KVC Westerlo",
+    "league": "Pro League",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Cardiff City",
+    "league": "League One",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "1. FC Nürnberg",
+    "league": "2. Bundesliga",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "New England Revolution",
+    "league": "Major League Soccer",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Ulsan HD FC",
+    "league": "K League 1",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Hammarby Fotboll",
+    "league": "Allsvenskan",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Pescara",
+    "league": "Serie B",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Alverca",
+    "league": "Primeira Liga",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Estrela da Amadora",
+    "league": "Primeira Liga",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "SK Sturm Graz",
+    "league": "Bundesliga",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Daejeon Citizen",
+    "league": "K League 1",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Gimnasia y Esgrima La Plata",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Al Ettifaq",
+    "league": "Pro League",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Antalyaspor",
+    "league": "Süper Lig",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "FBC Melgar",
+    "league": "Liga 1",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Granada CF",
+    "league": "La Liga 2",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "CD Castellón",
+    "league": "La Liga 2",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Avellino",
+    "league": "Serie B",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "SD Huesca",
+    "league": "La Liga 2",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "Randers FC",
+    "league": "Superliga",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "LASK Linz",
+    "league": "Bundesliga",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "1. FC Magdeburg",
+    "league": "2. Bundesliga",
+    "ovr": 68,
+    "stars": 2
+  },
+  {
+    "name": "FK Austria Wien",
+    "league": "Bundesliga",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Bolton Wanderers",
+    "league": "League One",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Philadelphia Union",
+    "league": "Major League Soccer",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Sheffield Wednesday",
+    "league": "Championship",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "SC Preußen Münster",
+    "league": "2. Bundesliga",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Amiens SC",
+    "league": "Ligue 2",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "FCV Dender EH",
+    "league": "Pro League",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Heracles Almelo",
+    "league": "Eredivisie",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "ESTAC Troyes",
+    "league": "Ligue 2",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Frosinone",
+    "league": "Serie B",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "En Avant Guingamp",
+    "league": "Ligue 2",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "FC Lausanne-Sport",
+    "league": "Super League",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Mantova",
+    "league": "Serie B",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Cerro Largo",
+    "league": "Primera División",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Godoy Cruz",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "AD Ceuta FC",
+    "league": "La Liga 2",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "NAC Breda",
+    "league": "Eredivisie",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "PEC Zwolle",
+    "league": "Eredivisie",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "FC Andorra",
+    "league": "La Liga 2",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "FC Groningen",
+    "league": "Eredivisie",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Blau-Weiß Linz",
+    "league": "Bundesliga",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "AVS Futebol SAD",
+    "league": "Primeira Liga",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "RAAL La Louvière",
+    "league": "Pro League",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Carabobo FC",
+    "league": "Primera Division",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Huddersfield Town",
+    "league": "League One",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Deportes Iquique",
+    "league": "Primera Division",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Reggiana",
+    "league": "Serie B",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "SK Brann",
+    "league": "Eliteserien",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Cracovia",
+    "league": "Ekstraklasa",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Shanghai Port",
+    "league": "Super League",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Universitatea Cluj",
+    "league": "Liga I",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Viborg FF",
+    "league": "Superliga",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Eintracht Braunschweig",
+    "league": "2. Bundesliga",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "SpVgg Greuther Fürth",
+    "league": "2. Bundesliga",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Red Star FC",
+    "league": "Ligue 2",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "USL Dunkerque",
+    "league": "Ligue 2",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "DC United",
+    "league": "Major League Soccer",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "FC Sion",
+    "league": "Super League",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Excelsior",
+    "league": "Eredivisie",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Academia Puerto Cabello",
+    "league": "Primera Division",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Colorado Rapids",
+    "league": "Major League Soccer",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "FC Dallas",
+    "league": "Major League Soccer",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "IF Elfsborg",
+    "league": "Allsvenskan",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "BK Häcken",
+    "league": "Allsvenskan",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Mjällby AIF",
+    "league": "Allsvenskan",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Wolfsberger AC",
+    "league": "Bundesliga",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Cercle Brugge KSV",
+    "league": "Pro League",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "CFR Cluj",
+    "league": "Liga I",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "CD Palestino",
+    "league": "Primera Division",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Guaraní",
+    "league": "División Profesional",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "CD Mirandés",
+    "league": "La Liga 2",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Dynamo Dresden",
+    "league": "2. Bundesliga",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "FC Nordsjælland",
+    "league": "Superliga",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "SS Juve Stabia",
+    "league": "Serie B",
+    "ovr": 67,
+    "stars": 2
+  },
+  {
+    "name": "Reading FC",
+    "league": "League One",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Grenoble Foot 38",
+    "league": "Ligue 2",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Silkeborg IF",
+    "league": "Superliga",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Odense Boldklub",
+    "league": "Superliga",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Deportivo Riestra",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Stade Lavallois Mayenne FC",
+    "league": "Ligue 2",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Clermont Foot 63",
+    "league": "Ligue 2",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "FC Hansa Rostock",
+    "league": "3. Liga",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "TSV 1860 München",
+    "league": "3. Liga",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "CF Montréal",
+    "league": "Major League Soccer",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Toronto FC",
+    "league": "Major League Soccer",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "FC Annecy",
+    "league": "Ligue 2",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Sporting Club Bastia",
+    "league": "Ligue 2",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "IFK Göteborg",
+    "league": "Allsvenskan",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Central Cordoba SdE",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Sarpsborg 08 FF",
+    "league": "Eliteserien",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Motherwell FC",
+    "league": "Premiership",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Shanghai Shenhua",
+    "league": "Super League",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Shandong Taishan",
+    "league": "Super League",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "FC Zürich",
+    "league": "Super League",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "GKS Katowice",
+    "league": "Ekstraklasa",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "FC Luzern",
+    "league": "Super League",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Colo-Colo",
+    "league": "Primera Division",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "FC Volendam",
+    "league": "Eredivisie",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Blackpool FC",
+    "league": "League One",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Plymouth Argyle",
+    "league": "League One",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Stockport County",
+    "league": "League One",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Wycombe Wanderers",
+    "league": "League One",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Al Kholood",
+    "league": "Pro League",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Vålerenga Fotball",
+    "league": "Eliteserien",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Zagłębie Lubin",
+    "league": "Ekstraklasa",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "FC Botoşani",
+    "league": "Liga I",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Al Fayha",
+    "league": "Pro League",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Atlético Grau",
+    "league": "Liga 1",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "AIK",
+    "league": "Allsvenskan",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "New York Red Bulls",
+    "league": "Major League Soccer",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "FC Thun",
+    "league": "Super League",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Pohang Steelers",
+    "league": "K League 1",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Djurgårdens IF",
+    "league": "Allsvenskan",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Boston River",
+    "league": "Primera División",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Korona Kielce",
+    "league": "Ekstraklasa",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Piast Gliwice",
+    "league": "Ekstraklasa",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Radomiak Radom",
+    "league": "Ekstraklasa",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Lechia Gdańsk",
+    "league": "Ekstraklasa",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Gangwon FC",
+    "league": "K League 1",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Motor Lublin",
+    "league": "Ekstraklasa",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "FCV Farul Constanța",
+    "league": "Liga I",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Virtus Entella",
+    "league": "Serie B",
+    "ovr": 66,
+    "stars": 2
+  },
+  {
+    "name": "Milton Keynes Dons",
+    "league": "League Two",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Al Fateh",
+    "league": "Pro League",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Gimcheon Sangmu FC",
+    "league": "K League 1",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "1. FC Saarbrücken",
+    "league": "3. Liga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Bradford City",
+    "league": "League One",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Rot-Weiss Essen",
+    "league": "3. Liga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Gualberto Villarroel SJ",
+    "league": "División de Fútbol Profesional",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Nacional Potosí",
+    "league": "División de Fútbol Profesional",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Telstar",
+    "league": "Eredivisie",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "AS Nancy Lorraine",
+    "league": "Ligue 2",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Wisła Płock",
+    "league": "Ekstraklasa",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "MSV Duisburg",
+    "league": "3. Liga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Alemannia Aachen",
+    "league": "3. Liga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Melbourne Victory",
+    "league": "A-League Men",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Sydney FC",
+    "league": "A-League Men",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Western Sydney Wanderers",
+    "league": "A-League Men",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Vejle Boldklub",
+    "league": "Superliga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "San Jose Earthquakes",
+    "league": "Major League Soccer",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Damac FC",
+    "league": "Pro League",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Grasshopper Club Zürich",
+    "league": "Super League",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Al Hazem FC",
+    "league": "Pro League",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "SSV Ulm 1846",
+    "league": "3. Liga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Melbourne City FC",
+    "league": "A-League Men",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Eyüpspor",
+    "league": "Süper Lig",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Stevenage",
+    "league": "League One",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Unión Española",
+    "league": "Primera Division",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Chengdu Rongcheng",
+    "league": "Super League",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Barnsley",
+    "league": "League One",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Caracas FC",
+    "league": "Primera Division",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Al Riyadh",
+    "league": "Pro League",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Deportivo Táchira",
+    "league": "Primera Division",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Lincoln City",
+    "league": "League One",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "FC Argeș",
+    "league": "Liga I",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Beijing Guoan",
+    "league": "Super League",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Auckland FC",
+    "league": "A-League Men",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "UTA Arad",
+    "league": "Liga I",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "SC Rheindorf Altach",
+    "league": "Bundesliga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "FC Energie Cottbus",
+    "league": "3. Liga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Tromsø IL",
+    "league": "Eliteserien",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Cienciano",
+    "league": "Liga 1",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Al Akhdoud Saudi Club",
+    "league": "Pro League",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "SC Verl",
+    "league": "3. Liga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Leyton Orient",
+    "league": "League One",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Sønderjyske Fodbold",
+    "league": "Superliga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "FC Anyang",
+    "league": "K League 1",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "FC Winterthur",
+    "league": "Super League",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Dundee United FC",
+    "league": "Premiership",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Mushuc Runa",
+    "league": "Serie A",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "WSG Tirol",
+    "league": "Bundesliga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Le Mans FC",
+    "league": "Ligue 2",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Grazer AK 1902",
+    "league": "Bundesliga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "TSV Hartberg",
+    "league": "Bundesliga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "VfL Osnabrück",
+    "league": "3. Liga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Racing Club de Montevideo",
+    "league": "Primera División",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "GAIS",
+    "league": "Allsvenskan",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "SV Wehen Wiesbaden",
+    "league": "3. Liga",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Pau FC",
+    "league": "Ligue 2",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Oțelul Galați",
+    "league": "Liga I",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Asociația Clubul Sportiv Petrolul 52",
+    "league": "Liga I",
+    "ovr": 65,
+    "stars": 2
+  },
+  {
+    "name": "Rotherham United",
+    "league": "League One",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Daegu FC",
+    "league": "K League 1",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "SV Ried",
+    "league": "Bundesliga",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "US Boulogne Cote d'Opale",
+    "league": "Ligue 2",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "SSV Jahn Regensburg",
+    "league": "3. Liga",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Newcastle Jets",
+    "league": "A-League Men",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Rodez Aveyron Football",
+    "league": "Ligue 2",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Shamrock Rovers",
+    "league": "Premier Division",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "IK Sirius",
+    "league": "Allsvenskan",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Viktoria Köln",
+    "league": "3. Liga",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Kilmarnock",
+    "league": "Premiership",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "IF Brommapojkarna",
+    "league": "Allsvenskan",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Livingston FC",
+    "league": "Premiership",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Real Sociedad de Fútbol B",
+    "league": "La Liga 2",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Wigan Athletic",
+    "league": "League One",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Bruk-Bet Termalica Nieciecza",
+    "league": "Ekstraklasa",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "FC Ingolstadt 04",
+    "league": "3. Liga",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Port Vale",
+    "league": "League One",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Doncaster Rovers",
+    "league": "League One",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Peterborough United",
+    "league": "League One",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Mansfield Town",
+    "league": "League One",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "KFUM-Kameratene Oslo",
+    "league": "Eliteserien",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Macarthur FC",
+    "league": "A-League Men",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Suwon FC",
+    "league": "K League 1",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Dundee FC",
+    "league": "Premiership",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Al-Najma SC",
+    "league": "Pro League",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "IFK Norrköping",
+    "league": "Allsvenskan",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "SV Waldhof Mannheim",
+    "league": "3. Liga",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "St. Mirren",
+    "league": "Premiership",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Jeju United FC",
+    "league": "K League 1",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "FC Hermannstadt",
+    "league": "Liga I",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Degerfors IF",
+    "league": "Allsvenskan",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "HJK Helsinki",
+    "league": "Veikkausliiga",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Arka Gdynia",
+    "league": "Ekstraklasa",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Fredrikstad FK",
+    "league": "Eliteserien",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "FC Erzgebirge Aue",
+    "league": "3. Liga",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Mohun Bagan Super Giant",
+    "league": "Super League",
+    "ovr": 64,
+    "stars": 1.5
+  },
+  {
+    "name": "Salford City",
+    "league": "League Two",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Walsall",
+    "league": "League Two",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Adelaide United",
+    "league": "A-League Men",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Brisbane Roar",
+    "league": "A-League Men",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Perth Glory",
+    "league": "A-League Men",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Crawley Town",
+    "league": "League Two",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Halmstads BK",
+    "league": "Allsvenskan",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Club Atlético San Martín",
+    "league": "Liga Profesional de Fútbol",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Unirea Slobozia",
+    "league": "Liga I",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "AFC Wimbledon",
+    "league": "League One",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Chesterfield",
+    "league": "League Two",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Northampton Town",
+    "league": "League One",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Exeter City",
+    "league": "League One",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Notts County",
+    "league": "League Two",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Cambridge United",
+    "league": "League Two",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Strømsgodset IF",
+    "league": "Eliteserien",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Fredericia",
+    "league": "Superliga",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Burton Albion",
+    "league": "League One",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Dalian Yingbo",
+    "league": "Super League",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "San Antonio Bulo Bulo",
+    "league": "División de Fútbol Profesional",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Hamarkameratene",
+    "league": "Eliteserien",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Sandefjord Fotball",
+    "league": "Eliteserien",
+    "ovr": 63,
+    "stars": 1.5
+  },
+  {
+    "name": "Gillingham",
+    "league": "League Two",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Zhejiang FC",
+    "league": "Super League",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Central Coast Mariners",
+    "league": "A-League Men",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Kristiansund BK",
+    "league": "Eliteserien",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Shelbourne FC",
+    "league": "Premier Division",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "1. FC Schweinfurt 05",
+    "league": "3. Liga",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Östers IF",
+    "league": "Allsvenskan",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Falkirk",
+    "league": "Premiership",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "TSV Havelse",
+    "league": "3. Liga",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Grimsby Town",
+    "league": "League Two",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Metaloglobus București",
+    "league": "Liga I",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Csíkszereda Miercurea Ciuc",
+    "league": "Liga I",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Bromley",
+    "league": "League Two",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Barrow",
+    "league": "League Two",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Shrewsbury Town",
+    "league": "League Two",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Fleetwood Town",
+    "league": "League Two",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Barnet",
+    "league": "League Two",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Swindon Town",
+    "league": "League Two",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Colchester United",
+    "league": "League Two",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Cheltenham Town",
+    "league": "League Two",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Wellington Phoenix",
+    "league": "A-League Men",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Tianjin Jinmen Tiger",
+    "league": "Super League",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "St Patrick's Athletic FC",
+    "league": "Premier Division",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Bristol Rovers",
+    "league": "League Two",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "FK Haugesund",
+    "league": "Eliteserien",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Derry City",
+    "league": "Premier Division",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Tranmere Rovers",
+    "league": "League Two",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Bryne FK",
+    "league": "Eliteserien",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "IFK Värnamo",
+    "league": "Allsvenskan",
+    "ovr": 62,
+    "stars": 1.5
+  },
+  {
+    "name": "Bohemian FC",
+    "league": "Premier Division",
+    "ovr": 61,
+    "stars": 1.5
+  },
+  {
+    "name": "Harrogate Town",
+    "league": "League Two",
+    "ovr": 61,
+    "stars": 1.5
+  },
+  {
+    "name": "VfB Stuttgart II",
+    "league": "3. Liga",
+    "ovr": 61,
+    "stars": 1.5
+  },
+  {
+    "name": "Crewe Alexandra",
+    "league": "League Two",
+    "ovr": 61,
+    "stars": 1.5
+  },
+  {
+    "name": "Oldham Athletic",
+    "league": "League Two",
+    "ovr": 61,
+    "stars": 1.5
+  },
+  {
+    "name": "Gwangju FC",
+    "league": "K League 1",
+    "ovr": 61,
+    "stars": 1.5
+  },
+  {
+    "name": "Changchun Yatai",
+    "league": "Super League",
+    "ovr": 61,
+    "stars": 1.5
+  },
+  {
+    "name": "Sportivo Luqueño",
+    "league": "División Profesional",
+    "ovr": 61,
+    "stars": 1.5
+  },
+  {
+    "name": "Qingdao West Coast FC",
+    "league": "Super League",
+    "ovr": 61,
+    "stars": 1.5
+  },
+  {
+    "name": "Henan FC",
+    "league": "Super League",
+    "ovr": 61,
+    "stars": 1.5
+  },
+  {
+    "name": "Sporting Kansas City",
+    "league": "Major League Soccer",
+    "ovr": 61,
+    "stars": 1.5
+  },
+  {
+    "name": "TSG 1899 Hoffenheim II",
+    "league": "3. Liga",
+    "ovr": 60,
+    "stars": 1.5
+  },
+  {
+    "name": "Newport County",
+    "league": "League Two",
+    "ovr": 60,
+    "stars": 1.5
+  },
+  {
+    "name": "Wuhan Three Towns",
+    "league": "Super League",
+    "ovr": 60,
+    "stars": 1.5
+  },
+  {
+    "name": "Meizhou Hakka",
+    "league": "Super League",
+    "ovr": 60,
+    "stars": 1.5
+  },
+  {
+    "name": "Yunnan Yukun",
+    "league": "Super League",
+    "ovr": 60,
+    "stars": 1.5
+  },
+  {
+    "name": "Accrington Stanley",
+    "league": "League Two",
+    "ovr": 60,
+    "stars": 1.5
+  },
+  {
+    "name": "East Bengal FC",
+    "league": "Super League",
+    "ovr": 59,
+    "stars": 1
+  },
+  {
+    "name": "Drogheda United",
+    "league": "Premier Division",
+    "ovr": 59,
+    "stars": 1
+  },
+  {
+    "name": "Sligo Rovers",
+    "league": "Premier Division",
+    "ovr": 59,
+    "stars": 1
+  },
+  {
+    "name": "United Tigers SC",
+    "league": "Super League",
+    "ovr": 59,
+    "stars": 1
+  },
+  {
+    "name": "FC Goa",
+    "league": "Super League",
+    "ovr": 59,
+    "stars": 1
+  },
+  {
+    "name": "Shenzhen Peng City",
+    "league": "Super League",
+    "ovr": 59,
+    "stars": 1
+  },
+  {
+    "name": "Galway United",
+    "league": "Premier Division",
+    "ovr": 58,
+    "stars": 1
+  },
+  {
+    "name": "Qingdao Hainiu FC",
+    "league": "Super League",
+    "ovr": 58,
+    "stars": 1
+  },
+  {
+    "name": "Chennaiyin FC",
+    "league": "Super League",
+    "ovr": 58,
+    "stars": 1
+  },
+  {
+    "name": "Mumbai City FC",
+    "league": "Super League",
+    "ovr": 58,
+    "stars": 1
+  },
+  {
+    "name": "Bengaluru FC",
+    "league": "Super League",
+    "ovr": 58,
+    "stars": 1
+  },
+  {
+    "name": "Waterford FC",
+    "league": "Premier Division",
+    "ovr": 58,
+    "stars": 1
+  },
+  {
+    "name": "Jamshedpur FC",
+    "league": "Super League",
+    "ovr": 58,
+    "stars": 1
+  },
+  {
+    "name": "Punjab FC",
+    "league": "Super League",
+    "ovr": 57,
+    "stars": 1
+  },
+  {
+    "name": "NorthEast United",
+    "league": "Super League",
+    "ovr": 57,
+    "stars": 1
+  },
+  {
+    "name": "Odisha FC",
+    "league": "Super League",
+    "ovr": 56,
+    "stars": 1
+  },
+  {
+    "name": "Cork City",
+    "league": "Premier Division",
+    "ovr": 56,
+    "stars": 1
+  },
+  {
+    "name": "Kerala Blasters FC",
+    "league": "Super League",
+    "ovr": 54,
+    "stars": 0.5
+  },
+  {
+    "name": "SC Delhi",
+    "league": "Super League",
+    "ovr": 54,
+    "stars": 0.5
+  },
+  {
+    "name": "Mohammedan SC",
+    "league": "Super League",
+    "ovr": 52,
+    "stars": 0.5
+  }
+]

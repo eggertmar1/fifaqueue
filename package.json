@@ -1,21 +1,39 @@
 {
   "name": "fifa-queue",
   "version": "1.0.0",
-  "main": "index.ts",
+  "main": "expo-router/entry",
   "scripts": {
     "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
     "web": "expo start --web"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.99.2",
     "expo": "~55.0.7",
+    "expo-auth-session": "~55.0.8",
+    "expo-constants": "~55.0.8",
+    "expo-device": "~55.0.10",
+    "expo-image": "~55.0.6",
+    "expo-linking": "~55.0.7",
+    "expo-notifications": "~55.0.13",
+    "expo-router": "~55.0.6",
     "expo-status-bar": "~55.0.4",
-    "react": "19.2.0",
-    "react-native": "0.83.2"
+    "expo-web-browser": "~55.0.10",
+    "nativewind": "4",
+    "react": "19.2.4",
+    "react-dom": "19.2.4",
+    "react-native": "0.83.2",
+    "react-native-gesture-handler": "~2.30.0",
+    "react-native-reanimated": "4.2.1",
+    "react-native-safe-area-context": "~5.6.2",
+    "react-native-screens": "~4.23.0",
+    "react-native-web": "^0.21.0",
+    "tailwindcss": "3"
   },
   "devDependencies": {
     "@types/react": "~19.2.2",
+    "expo-mcp": "~0.2.1",
     "typescript": "~5.9.2"
   },
   "private": true
