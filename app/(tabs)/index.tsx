@@ -130,7 +130,9 @@ export default function QueueScreen() {
         { event: "*", schema: "public", table: "seasons" },
         () => refreshData()
       )
-      .subscribe();
+      .subscribe((status, err) => {
+        console.log("[Realtime] Status:", status, err?.message ?? "");
+      });
 
     return () => {
       supabase.removeChannel(channel);
