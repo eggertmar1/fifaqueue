@@ -1,11 +1,23 @@
-import { View, Text, Image, ScrollView, ActivityIndicator, Pressable, StyleSheet } from "react-native";
+import {
+  View,
+  Text,
+  Image,
+  ScrollView,
+  ActivityIndicator,
+  Pressable,
+  StyleSheet,
+  TextInput,
+  Alert,
+} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import { useAuth } from "../../lib/auth-context";
 import { getStarRating } from "../../lib/elo";
 import { supabase } from "../../lib/supabase";
 import StarRating from "../../components/StarRating";
+import { displayName } from "../../lib/types";
 import type { HeadToHead, Player } from "../../lib/types";
+import * as ImagePicker from "expo-image-picker";
 
 interface PlayerStats {
   gamesPlayed: number;
@@ -422,8 +434,20 @@ export default function ProfileScreen() {
   const [maxElo, setMaxElo] = useState(1000);
   const [loading, setLoading] = useState(true);
 
+  // Nickname editing state
+  const [editingNickname, setEditingNickname] = useState(false);
+  const [nicknameValue, setNicknameValue] = useState("");
+  const [localNickname, setLocalNickname] = useState<string | null>(null);
+  const nicknameInputRef = useRef<TextInput>(null);
+
+  // Avatar state
+  const [localAvatarUrl, setLocalAvatarUrl] = useState<string | null>(null);
+  const [uploadingAvatar, setUploadingAvatar] = useState(false);
+
   useEffect(() => {
     if (!player) return;
+    setLocalNickname(player.nickname);
+    setLocalAvatarUrl(player.avatar_url);
     Promise.all([
       fetchPlayerStats(player.id),
       fetchHeadToHead(player.id),
@@ -437,6 +461,87 @@ export default function ProfileScreen() {
       setLoading(false);
     });
   }, [player]);
+
+  const handleNicknameTap = () => {
+    if (!player) return;
+    setNicknameValue(localNickname || player.name);
+    setEditingNickname(true);
+    // Focus after state update renders the input
+    setTimeout(() => nicknameInputRef.current?.focus(), 100);
+  };
+
+  const handleNicknameSave = async () => {
+    if (!player) return;
+    setEditingNickname(false);
+    const trimmed = nicknameValue.trim();
+    // If empty or same as Google name, clear nickname
+    const newNickname = trimmed === "" || trimmed === player.name ? null : trimmed;
+    setLocalNickname(newNickname);
+    await supabase
+      .from("players")
+      .update({ nickname: newNickname })
+      .eq("id", player.id);
+  };
+
+  const handleAvatarTap = async () => {
+    if (!player || uploadingAvatar) return;
+
+    const permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
+    if (!permissionResult.granted) {
+      Alert.alert("Permission required", "Please allow access to your photo library to change your avatar.");
+      return;
+    }
+
+    const result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [1, 1],
+      quality: 0.8,
+    });
+
+    if (result.canceled || !result.assets?.[0]) return;
+
+    setUploadingAvatar(true);
+    try {
+      const asset = result.assets[0];
+      const uri = asset.uri;
+
+      // Fetch the image as a blob
+      const response = await fetch(uri);
+      const blob = await response.blob();
+
+      const filePath = `${player.id}/avatar.jpg`;
+      const { error: uploadError } = await supabase.storage
+        .from("avatars")
+        .upload(filePath, blob, {
+          contentType: "image/jpeg",
+          upsert: true,
+        });
+
+      if (uploadError) {
+        Alert.alert("Upload failed", uploadError.message);
+        return;
+      }
+
+      const { data: urlData } = supabase.storage
+        .from("avatars")
+        .getPublicUrl(filePath);
+
+      // Append cache-buster so the image reloads
+      const publicUrl = `${urlData.publicUrl}?t=${Date.now()}`;
+
+      await supabase
+        .from("players")
+        .update({ avatar_url: publicUrl })
+        .eq("id", player.id);
+
+      setLocalAvatarUrl(publicUrl);
+    } catch (err: any) {
+      Alert.alert("Upload failed", err?.message ?? "Unknown error");
+    } finally {
+      setUploadingAvatar(false);
+    }
+  };
 
   if (!player) {
     return (
@@ -460,9 +565,16 @@ export default function ProfileScreen() {
     );
   }
 
+  // Build a local player object with nickname/avatar overrides for displayName()
+  const currentPlayer: Player = {
+    ...player,
+    nickname: localNickname ?? player.nickname,
+    avatar_url: localAvatarUrl ?? player.avatar_url,
+  };
+
   const avatarUri =
-    player.avatar_url ||
-    `https://ui-avatars.com/api/?name=${encodeURIComponent(player.name)}&background=2A2A2A&color=fff`;
+    currentPlayer.avatar_url ||
+    `https://ui-avatars.com/api/?name=${encodeURIComponent(currentPlayer.name)}&background=2A2A2A&color=fff`;
   const starRating = getStarRating(player.elo, maxElo);
 
   const hasEnoughGames = (stats?.gamesPlayed ?? 0) >= 3;
@@ -484,11 +596,52 @@ export default function ProfileScreen() {
 
         {/* Player Header */}
         <View style={styles.playerHeader}>
-          <Image
-            source={{ uri: avatarUri }}
-            style={styles.avatar}
-          />
-          <Text style={styles.playerName}>{player.name}</Text>
+          {/* Avatar with camera overlay */}
+          <Pressable onPress={handleAvatarTap} style={styles.avatarContainer}>
+            <Image
+              source={{ uri: avatarUri }}
+              style={styles.avatar}
+            />
+            {uploadingAvatar ? (
+              <View style={styles.avatarOverlay}>
+                <ActivityIndicator color="#fff" size="small" />
+              </View>
+            ) : (
+              <View style={styles.cameraIconBadge}>
+                <Text style={styles.cameraIconText}>📷</Text>
+              </View>
+            )}
+          </Pressable>
+
+          {/* Nickname / Name with pencil indicator */}
+          {editingNickname ? (
+            <TextInput
+              ref={nicknameInputRef}
+              style={styles.nicknameInput}
+              value={nicknameValue}
+              onChangeText={setNicknameValue}
+              onBlur={handleNicknameSave}
+              onSubmitEditing={handleNicknameSave}
+              returnKeyType="done"
+              maxLength={30}
+              placeholder="Enter nickname"
+              placeholderTextColor="#6B7280"
+              autoCapitalize="none"
+              autoCorrect={false}
+              selectTextOnFocus
+            />
+          ) : (
+            <Pressable onPress={handleNicknameTap} style={styles.nameRow}>
+              <Text style={styles.playerName}>{displayName(currentPlayer)}</Text>
+              <Text style={styles.pencilIcon}>✏️</Text>
+            </Pressable>
+          )}
+
+          {/* Show Google name underneath if nickname is set */}
+          {localNickname && !editingNickname && (
+            <Text style={styles.googleNameSubtitle}>{player.name}</Text>
+          )}
+
           <Text style={styles.eloText}>
             {player.elo} ELO
           </Text>
@@ -604,7 +757,7 @@ export default function ProfileScreen() {
                     style={styles.h2hName}
                     numberOfLines={1}
                   >
-                    {record.opponent.name}
+                    {displayName(record.opponent)}
                   </Text>
                   <View style={styles.h2hRecord}>
                     <Text style={styles.h2hWins}>
@@ -655,18 +808,73 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
     paddingBottom: 24,
   },
+  avatarContainer: {
+    position: "relative",
+    marginBottom: 12,
+  },
   avatar: {
     width: 96,
     height: 96,
     borderRadius: 9999,
     borderWidth: 4,
     borderColor: "#00D26A",
-    marginBottom: 12,
+  },
+  avatarOverlay: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    borderRadius: 9999,
+    backgroundColor: "rgba(0,0,0,0.5)",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  cameraIconBadge: {
+    position: "absolute",
+    bottom: 0,
+    right: 0,
+    backgroundColor: "#2A2A2A",
+    borderRadius: 12,
+    width: 28,
+    height: 28,
+    alignItems: "center",
+    justifyContent: "center",
+    borderWidth: 2,
+    borderColor: "#121212",
+  },
+  cameraIconText: {
+    fontSize: 14,
+  },
+  nameRow: {
+    flexDirection: "row",
+    alignItems: "center",
+    gap: 6,
   },
   playerName: {
     color: "#fff",
     fontSize: 20,
     fontWeight: "700",
+  },
+  pencilIcon: {
+    fontSize: 14,
+    opacity: 0.6,
+  },
+  googleNameSubtitle: {
+    color: "#6B7280",
+    fontSize: 14,
+    marginTop: 2,
+  },
+  nicknameInput: {
+    color: "#fff",
+    fontSize: 20,
+    fontWeight: "700",
+    borderBottomWidth: 2,
+    borderBottomColor: "#00D26A",
+    paddingVertical: 4,
+    paddingHorizontal: 8,
+    minWidth: 160,
+    textAlign: "center",
   },
   eloText: {
     color: "#00D26A",

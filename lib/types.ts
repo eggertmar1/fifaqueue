@@ -2,11 +2,16 @@ export interface Player {
   id: string;
   google_id: string;
   name: string;
+  nickname: string | null;
   avatar_url: string | null;
   elo: number;
   is_admin: boolean;
   expo_push_token: string | null;
   created_at: string;
+}
+
+export function displayName(player: Player): string {
+  return player.nickname || player.name;
 }
 
 export interface Season {

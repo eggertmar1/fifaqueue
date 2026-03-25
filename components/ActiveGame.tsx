@@ -5,6 +5,7 @@ import FifaTeamReveal from "./FifaTeamReveal";
 import { getStarRating } from "../lib/elo";
 import { getRandomTeamForStars, getTeamsForStars } from "../lib/fifa-teams";
 import type { FifaTeam } from "../lib/fifa-teams";
+import { displayName } from "../lib/types";
 import type { GamePlayer, Player } from "../lib/types";
 
 interface ActiveGameProps {
@@ -61,7 +62,7 @@ function TeamCard({
                 style={styles.playerName}
                 numberOfLines={1}
               >
-                {gp.player?.name?.split(" ")[0] || "?"}
+                {gp.player ? displayName(gp.player).split(" ")[0] : "?"}
               </Text>
             </View>
           );

@@ -1,4 +1,5 @@
 import { View, Text, FlatList, Image, Pressable, StyleSheet } from "react-native";
+import { displayName } from "../lib/types";
 import type { LeaderboardEntry } from "../lib/types";
 
 interface LeaderboardTableProps {
@@ -44,7 +45,7 @@ function LeaderboardRow({
       </Text>
       <Image source={{ uri: avatarUri }} style={styles.avatar} />
       <Text style={styles.playerName} numberOfLines={1}>
-        {entry.player.name}
+        {displayName(entry.player)}
       </Text>
       <Text style={styles.eloText}>{entry.elo}</Text>
       <Text style={styles.winsText}>{entry.wins}W</Text>

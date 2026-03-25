@@ -1,4 +1,5 @@
 import { View, Text, FlatList, Image, StyleSheet } from "react-native";
+import { displayName } from "../lib/types";
 import type { QueueEntry } from "../lib/types";
 
 interface QueueListProps {
@@ -27,7 +28,7 @@ function QueueRow({
     >
       <Image source={{ uri: avatarUri }} style={styles.avatar} />
       <Text style={styles.playerName} numberOfLines={1}>
-        {player?.name || "Unknown"}
+        {player ? displayName(player) : "Unknown"}
       </Text>
       <View style={styles.eloBadge}>
         <Text style={styles.eloText}>{player?.elo ?? 1000}</Text>

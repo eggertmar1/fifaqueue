@@ -14,6 +14,7 @@ import { useEffect, useState } from "react";
 import { useAuth } from "../../lib/auth-context";
 import { supabase } from "../../lib/supabase";
 import { getCurrentSeason } from "../../lib/queue";
+import { displayName } from "../../lib/types";
 import type { Player, Season, GameResult, Game } from "../../lib/types";
 
 function SectionHeader({ title }: { title: string }) {
@@ -315,7 +316,7 @@ export default function AdminScreen() {
                 style={styles.avatar}
               />
               <View style={styles.playerInfo}>
-                <Text style={styles.playerName}>{p.name}</Text>
+                <Text style={styles.playerName}>{displayName(p)}</Text>
                 <Text style={styles.playerMeta}>
                   ELO: {p.elo} {p.is_admin ? " | Admin" : ""}
                 </Text>
@@ -377,7 +378,7 @@ export default function AdminScreen() {
               style={[styles.poolRow, isInPool && styles.poolRowActive]}
             >
               <View style={styles.flex1}>
-                <Text style={styles.playerName}>{p.name}</Text>
+                <Text style={styles.playerName}>{displayName(p)}</Text>
                 <Text style={styles.playerMeta}>ELO: {p.elo}</Text>
               </View>
               <Text style={isInPool ? styles.poolStatusIn : styles.poolStatusOut}>
