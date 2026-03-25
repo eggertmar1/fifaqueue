@@ -99,45 +99,30 @@ export default function QueueScreen() {
     return () => clearInterval(interval);
   }, [season?.queue_open_override]);
 
-  // Realtime subscription
+  // Poll for updates every 5 seconds (reliable fallback for PWA)
   useEffect(() => {
     if (!season) return;
-
-    const channel = supabase
-      .channel("queue-realtime")
-      .on(
-        "postgres_changes",
-        { event: "*", schema: "public", table: "queue_entries" },
-        () => refreshData()
-      )
-      .on(
-        "postgres_changes",
-        { event: "*", schema: "public", table: "games" },
-        () => refreshData()
-      )
-      .on(
-        "postgres_changes",
-        { event: "*", schema: "public", table: "game_players" },
-        () => refreshData()
-      )
-      .on(
-        "postgres_changes",
-        { event: "*", schema: "public", table: "game_results" },
-        () => refreshData()
-      )
-      .on(
-        "postgres_changes",
-        { event: "*", schema: "public", table: "seasons" },
-        () => refreshData()
-      )
-      .subscribe((status, err) => {
-        console.log("[Realtime] Status:", status, err?.message ?? "");
-      });
-
-    return () => {
-      supabase.removeChannel(channel);
-    };
+    const interval = setInterval(() => {
+      refreshData();
+    }, 5000);
+    return () => clearInterval(interval);
   }, [season, refreshData]);
+
+  // Refresh when app comes back to foreground (tab switch, PWA reopen)
+  useEffect(() => {
+    if (!player) return;
+
+    const handleVisibility = () => {
+      if (document.visibilityState === "visible") {
+        refreshData();
+      }
+    };
+
+    if (typeof document !== "undefined") {
+      document.addEventListener("visibilitychange", handleVisibility);
+      return () => document.removeEventListener("visibilitychange", handleVisibility);
+    }
+  }, [player, refreshData]);
 
   const myPoolEntry = pool.find((e) => e.player_id === player?.id);
   const isRegistered = !!myPoolEntry;
