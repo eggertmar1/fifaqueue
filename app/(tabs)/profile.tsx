@@ -240,11 +240,11 @@ async function fetchFunStats(playerId: string): Promise<FunStats | null> {
     worstTeammate = null;
   }
 
-  // Nemesis: opponent you lose to most (highest loss rate, >= 2 games, excluding draws)
+  // Nemesis: opponent you lose to most (highest loss rate, >= 2 games, at least 1 loss)
   let nemesis: FunStats["nemesis"] = null;
   let nemesisRate = -1;
   for (const [pid, s] of opponentStats) {
-    if (s.games < 2) continue;
+    if (s.games < 2 || s.losses === 0) continue;
     const decidedGames = s.wins + s.losses;
     if (decidedGames === 0) continue;
     const rate = s.losses / decidedGames;
@@ -254,11 +254,11 @@ async function fetchFunStats(playerId: string): Promise<FunStats | null> {
     }
   }
 
-  // Easiest Opponent: opponent you beat most (highest win rate, >= 2 games, excluding draws)
+  // Easiest Opponent: opponent you beat most (highest win rate, >= 2 games, at least 1 win)
   let easiestOpponent: FunStats["easiestOpponent"] = null;
   let easiestRate = -1;
   for (const [pid, s] of opponentStats) {
-    if (s.games < 2) continue;
+    if (s.games < 2 || s.wins === 0) continue;
     const decidedGames = s.wins + s.losses;
     if (decidedGames === 0) continue;
     const rate = s.wins / decidedGames;
@@ -266,6 +266,11 @@ async function fetchFunStats(playerId: string): Promise<FunStats | null> {
       easiestRate = rate;
       easiestOpponent = { name: playerNames.get(pid) ?? "Unknown", winRate: Math.round(rate * 100), games: s.games };
     }
+  }
+
+  // Don't show easiest opponent if same as nemesis
+  if (nemesis && easiestOpponent && nemesis.name === easiestOpponent.name) {
+    easiestOpponent = null;
   }
 
   // Biggest Win: highest goal difference in a game I won
