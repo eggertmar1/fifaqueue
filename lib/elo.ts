@@ -15,9 +15,10 @@ export function getStarRating(
   groupMaxElo: number
 ): number {
   const ratio = teamAvgElo / groupMaxElo;
-  if (ratio >= 0.95) return 5;
-  if (ratio >= 0.85) return 4;
-  if (ratio >= 0.75) return 3;
-  if (ratio >= 0.6) return 2;
+  // Tight thresholds for small groups where ELOs are clustered
+  if (ratio >= 0.995) return 5;
+  if (ratio >= 0.98) return 4;
+  if (ratio >= 0.96) return 3;
+  if (ratio >= 0.94) return 2;
   return 1;
 }
