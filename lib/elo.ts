@@ -12,13 +12,13 @@ export function calculateElo(
 
 export function getStarRating(
   teamAvgElo: number,
-  groupMaxElo: number
+  _groupMaxElo: number
 ): number {
-  const ratio = teamAvgElo / groupMaxElo;
-  // Tight thresholds for small groups where ELOs are clustered
-  if (ratio >= 0.995) return 5;
-  if (ratio >= 0.98) return 4;
-  if (ratio >= 0.96) return 3;
-  if (ratio >= 0.94) return 2;
+  // Absolute thresholds based on team average ELO
+  // Starting ELO is 1000, so teams around 1000 get 3 stars (middle tier)
+  if (teamAvgElo >= 1040) return 5;
+  if (teamAvgElo >= 1020) return 4;
+  if (teamAvgElo >= 990) return 3;
+  if (teamAvgElo >= 960) return 2;
   return 1;
 }
