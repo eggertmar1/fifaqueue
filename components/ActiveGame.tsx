@@ -97,30 +97,33 @@ export default function ActiveGame({ gamePlayers, maxElo }: ActiveGameProps) {
   );
 
   const rollBoth = useCallback(() => {
-    const [t1, t2] = pickTwoDistinctTeams(stars1, stars2);
+    // Handicap: FIFA team for real-team-1 is picked from team-2's stars (and vice versa).
+    const [t1, t2] = pickTwoDistinctTeams(stars2, stars1);
     setFifaTeam1(t1);
     setFifaTeam2(t2);
   }, [stars1, stars2]);
 
   const rerollTeam1 = useCallback(() => {
-    let newTeam = getRandomTeamForStars(stars1);
-    let attempts = 0;
-    while (fifaTeam2 && newTeam.name === fifaTeam2.name && attempts < 20) {
-      newTeam = getRandomTeamForStars(stars1);
-      attempts++;
-    }
-    setFifaTeam1(newTeam);
-  }, [stars1, fifaTeam2]);
-
-  const rerollTeam2 = useCallback(() => {
+    // Handicap: real-team-1 receives a FIFA team picked from team-2's stars.
     let newTeam = getRandomTeamForStars(stars2);
     let attempts = 0;
-    while (fifaTeam1 && newTeam.name === fifaTeam1.name && attempts < 20) {
+    while (fifaTeam2 && newTeam.name === fifaTeam2.name && attempts < 20) {
       newTeam = getRandomTeamForStars(stars2);
       attempts++;
     }
+    setFifaTeam1(newTeam);
+  }, [stars2, fifaTeam2]);
+
+  const rerollTeam2 = useCallback(() => {
+    // Handicap: real-team-2 receives a FIFA team picked from team-1's stars.
+    let newTeam = getRandomTeamForStars(stars1);
+    let attempts = 0;
+    while (fifaTeam1 && newTeam.name === fifaTeam1.name && attempts < 20) {
+      newTeam = getRandomTeamForStars(stars1);
+      attempts++;
+    }
     setFifaTeam2(newTeam);
-  }, [stars2, fifaTeam1]);
+  }, [stars1, fifaTeam1]);
 
   const handleToggle = () => {
     if (!showFifaTeams) {
