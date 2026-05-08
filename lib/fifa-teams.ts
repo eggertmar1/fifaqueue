@@ -9,26 +9,9 @@ export interface FifaTeam {
 
 const allTeams: FifaTeam[] = teamsData as FifaTeam[];
 
-// Map app star rating (1-5 integer) to FC 26 star ranges
-function getFC26StarRange(appStars: number): [number, number] {
-  switch (appStars) {
-    case 5:
-      return [5, 5];
-    case 4:
-      return [4, 4.5];
-    case 3:
-      return [3, 3.5];
-    case 2:
-      return [2, 2.5];
-    case 1:
-    default:
-      return [0.5, 1.5];
-  }
-}
-
 export function getTeamsForStars(appStars: number): FifaTeam[] {
-  const [min, max] = getFC26StarRange(appStars);
-  return allTeams.filter((t) => t.stars >= min && t.stars <= max);
+  // Exact-match by half-step: appStars 3.5 selects only FC 26 teams rated 3.5.
+  return allTeams.filter((t) => Math.abs(t.stars - appStars) < 0.01);
 }
 
 export function getRandomTeamForStars(appStars: number): FifaTeam {

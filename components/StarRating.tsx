@@ -7,14 +7,28 @@ interface StarRatingProps {
 export default function StarRating({ rating }: StarRatingProps) {
   const stars = [];
   for (let i = 1; i <= 5; i++) {
-    stars.push(
-      <Text
-        key={i}
-        style={[styles.star, i <= rating ? styles.active : styles.inactive]}
-      >
-        {i <= rating ? "\u2605" : "\u2606"}
-      </Text>
-    );
+    if (rating >= i) {
+      stars.push(
+        <Text key={i} style={[styles.star, styles.active]}>
+          {"\u2605"}
+        </Text>
+      );
+    } else if (rating >= i - 0.5) {
+      stars.push(
+        <View key={i} style={styles.halfWrap}>
+          <Text style={[styles.star, styles.inactive]}>{"\u2606"}</Text>
+          <View style={styles.halfClip} pointerEvents="none">
+            <Text style={[styles.star, styles.active]}>{"\u2605"}</Text>
+          </View>
+        </View>
+      );
+    } else {
+      stars.push(
+        <Text key={i} style={[styles.star, styles.inactive]}>
+          {"\u2606"}
+        </Text>
+      );
+    }
   }
 
   return <View style={styles.container}>{stars}</View>;
@@ -33,5 +47,15 @@ const styles = StyleSheet.create({
   },
   inactive: {
     color: "#4B5563",
+  },
+  halfWrap: {
+    position: "relative",
+  },
+  halfClip: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "50%",
+    overflow: "hidden",
   },
 });

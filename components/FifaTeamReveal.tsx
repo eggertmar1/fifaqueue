@@ -15,10 +15,8 @@ export default function FifaTeamReveal({ team, onReroll }: FifaTeamRevealProps) 
   const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
   const prevTeamRef = useRef(team.name);
 
-  // Get the pool for the animation cycling
-  const pool = getTeamsForStars(
-    team.stars >= 5 ? 5 : team.stars >= 4 ? 4 : team.stars >= 3 ? 3 : team.stars >= 2 ? 2 : 1
-  );
+  // Animation pool: same exact half-star tier as the revealed team.
+  const pool = getTeamsForStars(team.stars);
 
   function runAnimation() {
     setRevealed(false);
