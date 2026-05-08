@@ -334,3 +334,15 @@ export async function submitResult(
 
   if (error) throw error;
 }
+
+export async function rejectGame(
+  gameId: string,
+  rejectedBy: string
+): Promise<void> {
+  const { error } = await supabase.rpc("reject_game", {
+    p_game_id: gameId,
+    p_rejected_by: rejectedBy,
+  });
+
+  if (error) throw error;
+}
