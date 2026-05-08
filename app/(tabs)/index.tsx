@@ -7,6 +7,7 @@ import {
   leavePool,
   startGame,
   submitResult,
+  rejectGame,
   getActiveGame,
   getTodayPool,
   getCurrentSeason,
@@ -55,6 +56,7 @@ export default function QueueScreen() {
   const [joining, setJoining] = useState(false);
   const [starting, setStarting] = useState(false);
   const [submitting, setSubmitting] = useState(false);
+  const [rejecting, setRejecting] = useState(false);
   const [countdown, setCountdown] = useState(getTimeUntil11());
   const [queueOpen, setQueueOpen] = useState(getReykjavikHour() >= 11);
 
@@ -184,6 +186,31 @@ export default function QueueScreen() {
     setSubmitting(false);
   };
 
+  const handleRejectGame = () => {
+    if (!activeGame || !player) return;
+    Alert.alert(
+      "Reject Game?",
+      "This cancels the game with no result recorded. Players go back to the pool.",
+      [
+        { text: "Cancel", style: "cancel" },
+        {
+          text: "Reject Game",
+          style: "destructive",
+          onPress: async () => {
+            setRejecting(true);
+            try {
+              await rejectGame(activeGame.id, player.id);
+              await refreshData();
+            } catch (e) {
+              console.error("Failed to reject game:", e);
+            }
+            setRejecting(false);
+          },
+        },
+      ]
+    );
+  };
+
   if (loading) {
     return (
       <SafeAreaView style={s.container}>
@@ -249,8 +276,25 @@ export default function QueueScreen() {
       {activeGame && (
         <View style={{ marginBottom: 16 }}>
           <ActiveGame gamePlayers={activeGame.game_players} maxElo={maxElo} />
-          {isInActiveGame && (
+          {(isInActiveGame || player?.is_admin) && (
             <SubmitResult onSubmit={handleSubmitResult} submitting={submitting} />
+          )}
+          {(isInActiveGame || player?.is_admin) && (
+            <View style={{ marginHorizontal: 16, marginTop: 12 }}>
+              <Pressable
+                onPress={handleRejectGame}
+                disabled={rejecting || submitting}
+                style={({ pressed }) => [
+                  s.rejectButton,
+                  (rejecting || submitting) && { opacity: 0.5 },
+                  pressed && { opacity: 0.7 },
+                ]}
+              >
+                <Text style={s.rejectButtonText}>
+                  {rejecting ? "Rejecting..." : "Reject Game"}
+                </Text>
+              </Pressable>
+            </View>
           )}
         </View>
       )}
@@ -330,4 +374,17 @@ const s = StyleSheet.create({
     alignItems: "center",
   },
   accentButtonText: { color: "#121212", fontWeight: "700", fontSize: 16 },
+  rejectButton: {
+    backgroundColor: "#1E1E1E",
+    borderWidth: 1,
+    borderColor: "#EF4444",
+    paddingVertical: 12,
+    borderRadius: 12,
+    alignItems: "center",
+  },
+  rejectButtonText: {
+    color: "#EF4444",
+    fontWeight: "700",
+    fontSize: 15,
+  },
 });
