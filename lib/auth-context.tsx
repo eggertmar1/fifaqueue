@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useEffect, useState } from "react";
+import { Platform } from "react-native";
 import { makeRedirectUri } from "expo-auth-session";
 import * as QueryParams from "expo-auth-session/build/QueryParams";
 import * as WebBrowser from "expo-web-browser";
@@ -9,7 +10,8 @@ import type { Session } from "@supabase/supabase-js";
 
 WebBrowser.maybeCompleteAuthSession();
 
-const redirectTo = makeRedirectUri();
+const redirectTo =
+  Platform.OS === "web" ? makeRedirectUri() : "fifa-queue://";
 
 interface AuthContextType {
   player: Player | null;
