@@ -11,10 +11,12 @@ import {
 } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useEffect, useState, useRef } from "react";
+import { useLocalSearchParams, useRouter } from "expo-router";
 import { useAuth } from "../../lib/auth-context";
 import { getStarRating } from "../../lib/elo";
 import { supabase } from "../../lib/supabase";
 import StarRating from "../../components/StarRating";
+import GlassSurface from "../../components/GlassSurface";
 import { displayName } from "../../lib/types";
 import type { HeadToHead, Player } from "../../lib/types";
 import * as ImagePicker from "expo-image-picker";
@@ -414,61 +416,81 @@ async function fetchMaxElo(): Promise<number> {
 
 function StatBox({ label, value }: { label: string; value: string | number }) {
   return (
-    <View style={styles.statBox}>
+    <GlassSurface style={styles.statBox} fallbackStyle={styles.softCardFallback}>
       <Text style={styles.statBoxLabel}>{label}</Text>
       <Text style={styles.statBoxValue}>{value}</Text>
-    </View>
+    </GlassSurface>
   );
 }
 
 function FunStatCard({ label, value, detail }: { label: string; value: string; detail?: string }) {
   return (
-    <View style={styles.funStatCard}>
+    <GlassSurface style={styles.funStatCard} fallbackStyle={styles.softCardFallback}>
       <Text style={styles.funStatLabel}>{label}</Text>
       <Text style={styles.funStatValue} numberOfLines={1}>{value}</Text>
       {detail ? <Text style={styles.funStatDetail}>{detail}</Text> : null}
-    </View>
+    </GlassSurface>
   );
 }
 
 export default function ProfileScreen() {
   const { player, signOut } = useAuth();
+  const router = useRouter();
+  const params = useLocalSearchParams<{ playerId?: string }>();
+
+  const viewedId =
+    typeof params.playerId === "string" && params.playerId !== player?.id
+      ? params.playerId
+      : player?.id;
+  const isOwnProfile = !!player && viewedId === player.id;
+
+  const [viewedPlayer, setViewedPlayer] = useState<Player | null>(null);
   const [stats, setStats] = useState<PlayerStats | null>(null);
   const [funStats, setFunStats] = useState<FunStats | null>(null);
   const [h2h, setH2h] = useState<HeadToHead[]>([]);
   const [maxElo, setMaxElo] = useState(1000);
   const [loading, setLoading] = useState(true);
 
-  // Nickname editing state
+  // Nickname editing state (own profile only)
   const [editingNickname, setEditingNickname] = useState(false);
   const [nicknameValue, setNicknameValue] = useState("");
   const [localNickname, setLocalNickname] = useState<string | null>(null);
   const nicknameInputRef = useRef<TextInput>(null);
 
-  // Avatar state
+  // Avatar state (own profile only)
   const [localAvatarUrl, setLocalAvatarUrl] = useState<string | null>(null);
   const [uploadingAvatar, setUploadingAvatar] = useState(false);
 
   useEffect(() => {
-    if (!player) return;
-    setLocalNickname(player.nickname);
-    setLocalAvatarUrl(player.avatar_url);
-    Promise.all([
-      fetchPlayerStats(player.id),
-      fetchHeadToHead(player.id),
-      fetchMaxElo(),
-      fetchFunStats(player.id),
-    ]).then(([s, h, m, f]) => {
+    if (!viewedId) return;
+    setLoading(true);
+    (async () => {
+      const { data: vp } = await supabase
+        .from("players")
+        .select("*")
+        .eq("id", viewedId)
+        .maybeSingle();
+      if (vp) {
+        setViewedPlayer(vp);
+        setLocalNickname(vp.nickname);
+        setLocalAvatarUrl(vp.avatar_url);
+      }
+      const [s, h, m, f] = await Promise.all([
+        fetchPlayerStats(viewedId),
+        fetchHeadToHead(viewedId),
+        fetchMaxElo(),
+        fetchFunStats(viewedId),
+      ]);
       setStats(s);
       setH2h(h);
       setMaxElo(m);
       setFunStats(f);
       setLoading(false);
-    });
-  }, [player]);
+    })();
+  }, [viewedId]);
 
   const handleNicknameTap = () => {
-    if (!player) return;
+    if (!player || !isOwnProfile) return;
     setNicknameValue(localNickname || player.name);
     setEditingNickname(true);
     // Focus after state update renders the input
@@ -476,7 +498,7 @@ export default function ProfileScreen() {
   };
 
   const handleNicknameSave = async () => {
-    if (!player) return;
+    if (!player || !isOwnProfile) return;
     setEditingNickname(false);
     const trimmed = nicknameValue.trim();
     // If empty or same as Google name, clear nickname
@@ -489,7 +511,7 @@ export default function ProfileScreen() {
   };
 
   const handleAvatarTap = async () => {
-    if (!player || uploadingAvatar) return;
+    if (!player || !isOwnProfile || uploadingAvatar) return;
 
     const permissionResult = await ImagePicker.requestMediaLibraryPermissionsAsync();
     if (!permissionResult.granted) {
@@ -550,37 +572,39 @@ export default function ProfileScreen() {
 
   if (!player) {
     return (
-      <SafeAreaView style={{ flex: 1, backgroundColor: "#121212", alignItems: "center", justifyContent: "center" }}>
-        <Text style={{ color: "#888", fontSize: 16, marginBottom: 20 }}>Not signed in</Text>
+      <SafeAreaView style={{ flex: 1, backgroundColor: "#171B22", alignItems: "center", justifyContent: "center" }}>
+        <Text style={{ color: "#9CA3AF", fontSize: 16, marginBottom: 20 }}>Not signed in</Text>
         <Pressable
           onPress={signOut}
-          style={{ backgroundColor: "#EF4444", paddingVertical: 12, paddingHorizontal: 32, borderRadius: 12 }}
+          style={{ backgroundColor: "rgba(217, 112, 112, 0.85)", paddingVertical: 12, paddingHorizontal: 32, borderRadius: 999 }}
         >
-          <Text style={{ color: "#fff", fontWeight: "600", fontSize: 15 }}>Sign Out & Retry</Text>
+          <Text style={{ color: "#171B22", fontWeight: "700", fontSize: 15 }}>Sign Out & Retry</Text>
         </Pressable>
       </SafeAreaView>
     );
   }
 
-  if (loading) {
+  if (loading || !viewedPlayer) {
     return (
       <SafeAreaView style={styles.loadingContainer}>
-        <ActivityIndicator color="#00D26A" size="large" />
+        <ActivityIndicator color="#7FD9A8" size="large" />
       </SafeAreaView>
     );
   }
 
-  // Build a local player object with nickname/avatar overrides for displayName()
-  const currentPlayer: Player = {
-    ...player,
-    nickname: localNickname ?? player.nickname,
-    avatar_url: localAvatarUrl ?? player.avatar_url,
-  };
+  // For own profile, apply optimistic nickname/avatar overrides
+  const displayedPlayer: Player = isOwnProfile
+    ? {
+        ...viewedPlayer,
+        nickname: localNickname ?? viewedPlayer.nickname,
+        avatar_url: localAvatarUrl ?? viewedPlayer.avatar_url,
+      }
+    : viewedPlayer;
 
   const avatarUri =
-    currentPlayer.avatar_url ||
-    `https://ui-avatars.com/api/?name=${encodeURIComponent(currentPlayer.name)}&background=2A2A2A&color=fff`;
-  const starRating = getStarRating(player.elo, maxElo);
+    displayedPlayer.avatar_url ||
+    `https://ui-avatars.com/api/?name=${encodeURIComponent(displayedPlayer.name)}&background=2A2A2A&color=fff`;
+  const starRating = getStarRating(displayedPlayer.elo, maxElo);
 
   const hasEnoughGames = (stats?.gamesPlayed ?? 0) >= 3;
   const hasFunStats = funStats && (
@@ -593,33 +617,43 @@ export default function ProfileScreen() {
   );
 
   return (
-    <SafeAreaView style={styles.safeArea}>
+    <SafeAreaView style={styles.safeArea} edges={["top", "left", "right"]}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.headerTitle}>
-          <Text style={styles.titleText}>Profile</Text>
+          {!isOwnProfile && (
+            <Pressable onPress={() => router.replace("/profile")} hitSlop={8}>
+              <Text style={styles.backLink}>{"\u2190 Back"}</Text>
+            </Pressable>
+          )}
+          <Text style={styles.titleText}>
+            {isOwnProfile ? "Profile" : displayName(displayedPlayer)}
+          </Text>
         </View>
 
         {/* Player Header */}
         <View style={styles.playerHeader}>
-          {/* Avatar with camera overlay */}
-          <Pressable onPress={handleAvatarTap} style={styles.avatarContainer}>
+          {/* Avatar with camera overlay (own profile only) */}
+          <Pressable
+            onPress={isOwnProfile ? handleAvatarTap : undefined}
+            style={styles.avatarContainer}
+          >
             <Image
               source={{ uri: avatarUri }}
               style={styles.avatar}
             />
-            {uploadingAvatar ? (
+            {isOwnProfile && uploadingAvatar ? (
               <View style={styles.avatarOverlay}>
                 <ActivityIndicator color="#fff" size="small" />
               </View>
-            ) : (
+            ) : isOwnProfile ? (
               <View style={styles.cameraIconBadge}>
                 <Text style={styles.cameraIconText}>📷</Text>
               </View>
-            )}
+            ) : null}
           </Pressable>
 
-          {/* Nickname / Name with pencil indicator */}
-          {editingNickname ? (
+          {/* Nickname / Name with pencil indicator (own profile only) */}
+          {isOwnProfile && editingNickname ? (
             <TextInput
               ref={nicknameInputRef}
               style={styles.nicknameInput}
@@ -635,20 +669,22 @@ export default function ProfileScreen() {
               autoCorrect={false}
               selectTextOnFocus
             />
-          ) : (
+          ) : isOwnProfile ? (
             <Pressable onPress={handleNicknameTap} style={styles.nameRow}>
-              <Text style={styles.playerName}>{displayName(currentPlayer)}</Text>
+              <Text style={styles.playerName}>{displayName(displayedPlayer)}</Text>
               <Text style={styles.pencilIcon}>✏️</Text>
             </Pressable>
+          ) : (
+            <Text style={styles.playerName}>{displayName(displayedPlayer)}</Text>
           )}
 
-          {/* Show Google name underneath if nickname is set */}
-          {localNickname && !editingNickname && (
-            <Text style={styles.googleNameSubtitle}>{player.name}</Text>
+          {/* Show Google name underneath if nickname differs */}
+          {displayedPlayer.nickname && !editingNickname && (
+            <Text style={styles.googleNameSubtitle}>{displayedPlayer.name}</Text>
           )}
 
           <Text style={styles.eloText}>
-            {player.elo} ELO
+            {displayedPlayer.elo} ELO
           </Text>
           <View style={styles.starRatingWrapper}>
             <StarRating rating={starRating} />
@@ -750,9 +786,10 @@ export default function ProfileScreen() {
                 record.opponent.avatar_url ||
                 `https://ui-avatars.com/api/?name=${encodeURIComponent(record.opponent.name)}&background=2A2A2A&color=fff`;
               return (
-                <View
+                <GlassSurface
                   key={record.opponent.id}
                   style={styles.h2hRow}
+                  fallbackStyle={styles.softCardFallback}
                 >
                   <Image
                     source={{ uri: oppAvatar }}
@@ -773,7 +810,7 @@ export default function ProfileScreen() {
                       {record.lossesAgainst}L
                     </Text>
                   </View>
-                </View>
+                </GlassSurface>
               );
             })}
           {h2h.length === 0 && (
@@ -790,13 +827,18 @@ export default function ProfileScreen() {
 const styles = StyleSheet.create({
   loadingContainer: {
     flex: 1,
-    backgroundColor: "#121212",
+    backgroundColor: "#171B22",
     alignItems: "center",
     justifyContent: "center",
   },
   safeArea: {
     flex: 1,
-    backgroundColor: "#121212",
+    backgroundColor: "#171B22",
+  },
+  softCardFallback: {
+    backgroundColor: "rgba(42, 46, 52, 0.7)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.06)",
   },
   headerTitle: {
     paddingHorizontal: 24,
@@ -804,9 +846,15 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
   },
   titleText: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontSize: 24,
     fontWeight: "700",
+  },
+  backLink: {
+    color: "#7FD9A8",
+    fontSize: 14,
+    fontWeight: "600",
+    marginBottom: 8,
   },
   playerHeader: {
     alignItems: "center",
@@ -821,8 +869,8 @@ const styles = StyleSheet.create({
     width: 96,
     height: 96,
     borderRadius: 9999,
-    borderWidth: 4,
-    borderColor: "#00D26A",
+    borderWidth: 3,
+    borderColor: "rgba(127, 217, 168, 0.7)",
   },
   avatarOverlay: {
     position: "absolute",
@@ -839,14 +887,14 @@ const styles = StyleSheet.create({
     position: "absolute",
     bottom: 0,
     right: 0,
-    backgroundColor: "#2A2A2A",
+    backgroundColor: "rgba(42, 46, 52, 0.95)",
     borderRadius: 12,
     width: 28,
     height: 28,
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 2,
-    borderColor: "#121212",
+    borderColor: "#171B22",
   },
   cameraIconText: {
     fontSize: 14,
@@ -857,7 +905,7 @@ const styles = StyleSheet.create({
     gap: 6,
   },
   playerName: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontSize: 20,
     fontWeight: "700",
   },
@@ -871,18 +919,18 @@ const styles = StyleSheet.create({
     marginTop: 2,
   },
   nicknameInput: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontSize: 20,
     fontWeight: "700",
     borderBottomWidth: 2,
-    borderBottomColor: "#00D26A",
+    borderBottomColor: "rgba(127, 217, 168, 0.7)",
     paddingVertical: 4,
     paddingHorizontal: 8,
     minWidth: 160,
     textAlign: "center",
   },
   eloText: {
-    color: "#00D26A",
+    color: "#7FD9A8",
     fontSize: 24,
     fontWeight: "700",
     marginTop: 4,
@@ -905,19 +953,19 @@ const styles = StyleSheet.create({
     marginTop: 8,
   },
   statBox: {
-    backgroundColor: "#2A2A2A",
-    borderRadius: 12,
+    borderRadius: 14,
     padding: 12,
     alignItems: "center",
     flex: 1,
+    overflow: "hidden",
   },
   statBoxLabel: {
-    color: "#6B7280",
+    color: "#9CA3AF",
     fontSize: 12,
     marginBottom: 4,
   },
   statBoxValue: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontSize: 18,
     fontWeight: "700",
   },
@@ -926,17 +974,17 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
   funStatsTitle: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontSize: 18,
     fontWeight: "700",
     marginBottom: 12,
   },
   funStatsLocked: {
-    color: "#6B7280",
+    color: "#9CA3AF",
     textAlign: "center",
     paddingVertical: 16,
-    backgroundColor: "#2A2A2A",
-    borderRadius: 12,
+    backgroundColor: "rgba(255,255,255,0.04)",
+    borderRadius: 14,
     overflow: "hidden",
   },
   funStatsGrid: {
@@ -945,20 +993,20 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   funStatCard: {
-    backgroundColor: "#2A2A2A",
-    borderRadius: 12,
+    borderRadius: 14,
     padding: 12,
     width: "48.5%",
     minWidth: 150,
     flexGrow: 1,
+    overflow: "hidden",
   },
   funStatLabel: {
-    color: "#6B7280",
+    color: "#9CA3AF",
     fontSize: 12,
     marginBottom: 4,
   },
   funStatValue: {
-    color: "#00D26A",
+    color: "#7FD9A8",
     fontSize: 16,
     fontWeight: "700",
   },
@@ -969,10 +1017,10 @@ const styles = StyleSheet.create({
   },
   h2hSection: {
     paddingHorizontal: 24,
-    paddingBottom: 32,
+    paddingBottom: 140,
   },
   h2hTitle: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontSize: 18,
     fontWeight: "700",
     marginBottom: 12,
@@ -980,21 +1028,21 @@ const styles = StyleSheet.create({
   h2hRow: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#2A2A2A",
-    borderRadius: 12,
+    borderRadius: 14,
     paddingHorizontal: 16,
     paddingVertical: 12,
     marginBottom: 8,
+    overflow: "hidden",
   },
   h2hAvatar: {
     width: 36,
     height: 36,
     borderRadius: 9999,
     borderWidth: 1,
-    borderColor: "#333333",
+    borderColor: "rgba(255,255,255,0.12)",
   },
   h2hName: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontWeight: "600",
     marginLeft: 12,
     flex: 1,
@@ -1005,14 +1053,14 @@ const styles = StyleSheet.create({
     gap: 8,
   },
   h2hWins: {
-    color: "#00D26A",
+    color: "#7FD9A8",
     fontWeight: "700",
   },
   h2hDash: {
     color: "#4B5563",
   },
   h2hLosses: {
-    color: "#F87171",
+    color: "#D97070",
     fontWeight: "700",
   },
   h2hEmpty: {
