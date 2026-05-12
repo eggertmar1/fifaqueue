@@ -86,7 +86,7 @@ export default function AdminScreen() {
   if (loading) {
     return (
       <SafeAreaView style={styles.centeredContainer}>
-        <ActivityIndicator color="#00D26A" size="large" />
+        <ActivityIndicator color="#7FD9A8" size="large" />
       </SafeAreaView>
     );
   }
@@ -279,7 +279,7 @@ export default function AdminScreen() {
   };
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={["top", "left", "right"]}>
       <ScrollView showsVerticalScrollIndicator={false} style={styles.scrollView}>
         <Text style={styles.title}>Admin</Text>
 
@@ -411,7 +411,7 @@ export default function AdminScreen() {
                   }}
                   style={{ marginRight: 12 }}
                 >
-                  <Text style={{ color: "#FFB800", fontSize: 14, fontWeight: "600" }}>Edit</Text>
+                  <Text style={{ color: "#D4B475", fontSize: 14, fontWeight: "600" }}>Edit</Text>
                 </Pressable>
                 <Pressable onPress={() => handleDeleteResult(r.game_id)}>
                   <Text style={styles.removeText}>Delete</Text>
@@ -488,11 +488,11 @@ export default function AdminScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#121212",
+    backgroundColor: "#171B22",
   },
   centeredContainer: {
     flex: 1,
-    backgroundColor: "#121212",
+    backgroundColor: "#171B22",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -504,13 +504,13 @@ const styles = StyleSheet.create({
     paddingHorizontal: 24,
   },
   title: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontSize: 24,
     fontWeight: "700",
     paddingTop: 16,
   },
   sectionHeader: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontSize: 18,
     fontWeight: "700",
     marginBottom: 12,
@@ -523,29 +523,29 @@ const styles = StyleSheet.create({
   },
   textInput: {
     flex: 1,
-    backgroundColor: "#2A2A2A",
+    backgroundColor: "rgba(42, 46, 52, 0.75)",
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 12,
-    color: "#fff",
+    color: "#E8E8E8",
     borderWidth: 1,
-    borderColor: "#333333",
+    borderColor: "rgba(255,255,255,0.08)",
   },
   primaryButton: {
-    backgroundColor: "#00D26A",
+    backgroundColor: "#7FD9A8",
     borderRadius: 12,
     paddingHorizontal: 16,
     alignItems: "center",
     justifyContent: "center",
   },
   buttonText: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontWeight: "700",
   },
   playerRow: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#2A2A2A",
+    backgroundColor: "rgba(42, 46, 52, 0.75)",
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 12,
@@ -556,14 +556,14 @@ const styles = StyleSheet.create({
     height: 36,
     borderRadius: 9999,
     borderWidth: 1,
-    borderColor: "#333333",
+    borderColor: "rgba(255,255,255,0.08)",
   },
   playerInfo: {
     flex: 1,
     marginLeft: 12,
   },
   playerName: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontWeight: "600",
   },
   playerMeta: {
@@ -571,7 +571,7 @@ const styles = StyleSheet.create({
     fontSize: 12,
   },
   removeText: {
-    color: "#F87171",
+    color: "#D97070",
     fontSize: 14,
     fontWeight: "600",
   },
@@ -596,7 +596,7 @@ const styles = StyleSheet.create({
   resultRow: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#2A2A2A",
+    backgroundColor: "rgba(42, 46, 52, 0.75)",
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 12,
@@ -606,7 +606,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   seasonCard: {
-    backgroundColor: "#2A2A2A",
+    backgroundColor: "rgba(42, 46, 52, 0.75)",
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 12,
@@ -614,24 +614,24 @@ const styles = StyleSheet.create({
   },
   toggleButton: {
     flex: 1,
-    backgroundColor: "#2A2A2A",
+    backgroundColor: "rgba(42, 46, 52, 0.75)",
     borderRadius: 12,
     paddingVertical: 10,
     alignItems: "center",
     borderWidth: 1,
-    borderColor: "#333333",
+    borderColor: "rgba(255,255,255,0.08)",
   },
   toggleButtonActive: {
-    backgroundColor: "rgba(0, 210, 106, 0.2)",
-    borderColor: "#00D26A",
+    backgroundColor: "rgba(127, 217, 168, 0.18)",
+    borderColor: "#7FD9A8",
   },
   toggleButtonClosed: {
-    backgroundColor: "rgba(239, 68, 68, 0.2)",
-    borderColor: "#EF4444",
+    backgroundColor: "rgba(217, 112, 112, 0.18)",
+    borderColor: "#D97070",
   },
   toggleButtonAuto: {
-    backgroundColor: "rgba(255, 184, 0, 0.2)",
-    borderColor: "#FFB800",
+    backgroundColor: "rgba(212, 180, 117, 0.18)",
+    borderColor: "#D4B475",
   },
   toggleButtonText: {
     color: "#6B7280",
@@ -639,12 +639,12 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   toggleButtonTextActive: {
-    color: "#fff",
+    color: "#E8E8E8",
   },
   editRow: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#1E1E1E",
+    backgroundColor: "rgba(255,255,255,0.03)",
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 10,
@@ -652,20 +652,20 @@ const styles = StyleSheet.create({
     marginTop: -4,
   },
   scoreInput: {
-    backgroundColor: "#2A2A2A",
+    backgroundColor: "rgba(42, 46, 52, 0.75)",
     borderRadius: 8,
     paddingHorizontal: 12,
     paddingVertical: 6,
-    color: "#fff",
+    color: "#E8E8E8",
     fontSize: 16,
     fontWeight: "700",
     width: 48,
     textAlign: "center",
     borderWidth: 1,
-    borderColor: "#333333",
+    borderColor: "rgba(255,255,255,0.08)",
   },
   saveButton: {
-    backgroundColor: "#00D26A",
+    backgroundColor: "#7FD9A8",
     borderRadius: 8,
     paddingHorizontal: 16,
     paddingVertical: 8,
@@ -674,20 +674,20 @@ const styles = StyleSheet.create({
   poolRow: {
     flexDirection: "row",
     alignItems: "center",
-    backgroundColor: "#2A2A2A",
+    backgroundColor: "rgba(42, 46, 52, 0.75)",
     borderRadius: 12,
     paddingHorizontal: 16,
     paddingVertical: 12,
     marginBottom: 6,
     borderWidth: 1,
-    borderColor: "#333333",
+    borderColor: "rgba(255,255,255,0.08)",
   },
   poolRowActive: {
-    backgroundColor: "rgba(0, 210, 106, 0.1)",
-    borderColor: "#00D26A",
+    backgroundColor: "rgba(127, 217, 168, 0.12)",
+    borderColor: "#7FD9A8",
   },
   poolStatusIn: {
-    color: "#00D26A",
+    color: "#7FD9A8",
     fontSize: 13,
     fontWeight: "600",
   },
@@ -697,6 +697,6 @@ const styles = StyleSheet.create({
     fontWeight: "600",
   },
   bottomSpacer: {
-    height: 32,
+    height: 140,
   },
 });

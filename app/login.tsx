@@ -48,7 +48,7 @@ export default function LoginScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#121212",
+    backgroundColor: "#171B22",
   },
   content: {
     flex: 1,
@@ -61,7 +61,7 @@ const styles = StyleSheet.create({
     marginBottom: 64,
   },
   fifaText: {
-    color: "#00D26A",
+    color: "#7FD9A8",
     fontSize: 56,
     fontWeight: "900",
     letterSpacing: 4,

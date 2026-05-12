@@ -43,10 +43,10 @@ const styles = StyleSheet.create({
     fontSize: 18,
   },
   active: {
-    color: "#FFB800",
+    color: "#D4B475",
   },
   inactive: {
-    color: "#4B5563",
+    color: "rgba(255,255,255,0.15)",
   },
   halfWrap: {
     position: "relative",

@@ -42,7 +42,7 @@ export default function FifaTeamBadge({
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: "#1E1E1E",
+    backgroundColor: "rgba(255,255,255,0.06)",
     alignItems: "center",
     justifyContent: "center",
     overflow: "hidden",

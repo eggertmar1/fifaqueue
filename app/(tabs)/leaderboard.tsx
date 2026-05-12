@@ -175,7 +175,7 @@ export default function LeaderboardScreen() {
   }, [selectedSeason]);
 
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView style={styles.container} edges={["top", "left", "right"]}>
       <View style={styles.header}>
         <Text style={styles.title}>Leaderboard</Text>
         {/* Season selector */}
@@ -213,7 +213,7 @@ export default function LeaderboardScreen() {
 
       {loading ? (
         <View style={styles.loadingContainer}>
-          <ActivityIndicator color="#00D26A" size="large" />
+          <ActivityIndicator color="#7FD9A8" size="large" />
         </View>
       ) : (
         <LeaderboardTable
@@ -229,7 +229,7 @@ export default function LeaderboardScreen() {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: "#121212",
+    backgroundColor: "#171B22",
   },
   header: {
     paddingHorizontal: 24,
@@ -237,7 +237,7 @@ const styles = StyleSheet.create({
     paddingBottom: 12,
   },
   title: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontSize: 24,
     fontWeight: "700",
   },
@@ -252,17 +252,19 @@ const styles = StyleSheet.create({
     borderRadius: 9999,
   },
   seasonPillActive: {
-    backgroundColor: "#00D26A",
+    backgroundColor: "rgba(127, 217, 168, 0.85)",
   },
   seasonPillInactive: {
-    backgroundColor: "#2A2A2A",
+    backgroundColor: "rgba(255,255,255,0.06)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.08)",
   },
   seasonText: {
     fontSize: 14,
     fontWeight: "600",
   },
   seasonTextActive: {
-    color: "#fff",
+    color: "#171B22",
   },
   seasonTextInactive: {
     color: "#9CA3AF",

@@ -2,6 +2,7 @@ import { View, Text, Image, StyleSheet, Pressable } from "react-native";
 import { useState, useCallback } from "react";
 import StarRating from "./StarRating";
 import FifaTeamReveal from "./FifaTeamReveal";
+import GlassSurface from "./GlassSurface";
 import { getStarRating } from "../lib/elo";
 import { getRandomTeamForStars, getTeamsForStars } from "../lib/fifa-teams";
 import type { FifaTeam } from "../lib/fifa-teams";
@@ -28,22 +29,21 @@ function pickTwoDistinctTeams(stars1: number, stars2: number): [FifaTeam, FifaTe
 function TeamCard({
   team,
   players,
-  maxElo,
+  stars,
   fifaTeam,
   onReroll,
 }: {
   team: 1 | 2;
   players: (GamePlayer & { player?: Player })[];
-  maxElo: number;
+  stars: number;
   fifaTeam: FifaTeam | null;
   onReroll?: () => void;
 }) {
   const avgElo =
     players.reduce((sum, gp) => sum + gp.elo_before, 0) / players.length;
-  const stars = getStarRating(avgElo, maxElo);
 
   return (
-    <View style={styles.teamCard}>
+    <GlassSurface style={styles.teamCard} fallbackStyle={styles.teamCardFallback}>
       <Text style={styles.teamLabel}>
         TEAM {team}
       </Text>
@@ -75,7 +75,7 @@ function TeamCard({
       {fifaTeam && (
         <FifaTeamReveal team={fifaTeam} onReroll={onReroll} />
       )}
-    </View>
+    </GlassSurface>
   );
 }
 
@@ -144,7 +144,7 @@ export default function ActiveGame({ gamePlayers, maxElo }: ActiveGameProps) {
         <TeamCard
           team={1}
           players={team1Players}
-          maxElo={maxElo}
+          stars={stars2}
           fifaTeam={showFifaTeams ? fifaTeam1 : null}
           onReroll={rerollTeam1}
         />
@@ -154,7 +154,7 @@ export default function ActiveGame({ gamePlayers, maxElo }: ActiveGameProps) {
         <TeamCard
           team={2}
           players={team2Players}
-          maxElo={maxElo}
+          stars={stars1}
           fifaTeam={showFifaTeams ? fifaTeam2 : null}
           onReroll={rerollTeam2}
         />
@@ -189,10 +189,15 @@ const styles = StyleSheet.create({
   },
   teamCard: {
     flex: 1,
-    backgroundColor: "#2A2A2A",
-    borderRadius: 16,
+    borderRadius: 20,
     padding: 16,
     alignItems: "center",
+    overflow: "hidden",
+  },
+  teamCardFallback: {
+    backgroundColor: "rgba(42, 46, 52, 0.75)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.06)",
   },
   teamLabel: {
     color: "#9CA3AF",
@@ -224,7 +229,7 @@ const styles = StyleSheet.create({
     fontWeight: "500",
   },
   eloText: {
-    color: "#00D26A",
+    color: "#7FD9A8",
     fontWeight: "700",
     fontSize: 18,
     marginBottom: 4,
@@ -243,23 +248,23 @@ const styles = StyleSheet.create({
     marginTop: 12,
     paddingVertical: 10,
     paddingHorizontal: 20,
-    borderRadius: 12,
-    backgroundColor: "#1E1E1E",
+    borderRadius: 999,
+    backgroundColor: "rgba(255,255,255,0.04)",
     borderWidth: 1,
-    borderColor: "#333333",
+    borderColor: "rgba(255,255,255,0.08)",
     alignItems: "center",
     alignSelf: "center",
   },
   toggleButtonActive: {
-    backgroundColor: "rgba(0, 210, 106, 0.15)",
-    borderColor: "#00D26A",
+    backgroundColor: "rgba(127, 217, 168, 0.14)",
+    borderColor: "rgba(127, 217, 168, 0.45)",
   },
   toggleText: {
-    color: "#6B7280",
+    color: "#9CA3AF",
     fontSize: 14,
     fontWeight: "600",
   },
   toggleTextActive: {
-    color: "#00D26A",
+    color: "#7FD9A8",
   },
 });

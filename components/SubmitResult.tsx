@@ -1,5 +1,6 @@
 import { View, Text, Pressable, StyleSheet } from "react-native";
 import { useState } from "react";
+import GlassSurface from "./GlassSurface";
 
 interface SubmitResultProps {
   onSubmit: (team1Goals: number, team2Goals: number) => void;
@@ -48,7 +49,7 @@ export default function SubmitResult({ onSubmit, submitting }: SubmitResultProps
   const isDisabled = !!submitting;
 
   return (
-    <View style={styles.card}>
+    <GlassSurface style={styles.card} fallbackStyle={styles.cardFallback}>
       <Text style={styles.title}>
         Submit Score
       </Text>
@@ -74,7 +75,7 @@ export default function SubmitResult({ onSubmit, submitting }: SubmitResultProps
           Draw — no ELO changes
         </Text>
       )}
-    </View>
+    </GlassSurface>
   );
 }
 
@@ -99,19 +100,19 @@ const styles = StyleSheet.create({
     width: 40,
     height: 40,
     borderRadius: 9999,
-    backgroundColor: "#1E1E1E",
+    backgroundColor: "rgba(255,255,255,0.06)",
     alignItems: "center",
     justifyContent: "center",
     borderWidth: 1,
-    borderColor: "#333333",
+    borderColor: "rgba(255,255,255,0.1)",
   },
   goalButtonText: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontSize: 20,
     fontWeight: "700",
   },
   goalValue: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontSize: 36,
     fontWeight: "700",
     width: 48,
@@ -120,12 +121,17 @@ const styles = StyleSheet.create({
   card: {
     marginHorizontal: 16,
     marginTop: 16,
-    backgroundColor: "#2A2A2A",
-    borderRadius: 16,
+    borderRadius: 20,
     padding: 20,
+    overflow: "hidden",
+  },
+  cardFallback: {
+    backgroundColor: "rgba(42, 46, 52, 0.75)",
+    borderWidth: 1,
+    borderColor: "rgba(255,255,255,0.06)",
   },
   title: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontSize: 16,
     fontWeight: "700",
     textAlign: "center",
@@ -148,13 +154,13 @@ const styles = StyleSheet.create({
     alignItems: "center",
   },
   submitButtonActive: {
-    backgroundColor: "#00D26A",
+    backgroundColor: "rgba(127, 217, 168, 0.85)",
   },
   submitButtonDisabled: {
-    backgroundColor: "#374151",
+    backgroundColor: "rgba(255,255,255,0.08)",
   },
   submitButtonText: {
-    color: "#fff",
+    color: "#171B22",
     fontWeight: "700",
     fontSize: 16,
   },

@@ -1,4 +1,4 @@
-import { View, Text, Pressable, ActivityIndicator, StyleSheet, Button, Alert } from "react-native";
+import { View, Text, Pressable, ActivityIndicator, StyleSheet, Button, Alert, Platform } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useEffect, useState, useCallback } from "react";
 import { useAuth } from "../../lib/auth-context";
@@ -17,6 +17,7 @@ import type { QueueEntry, Game, GamePlayer, Season, Player } from "../../lib/typ
 import QueueList from "../../components/QueueList";
 import ActiveGame from "../../components/ActiveGame";
 import SubmitResult from "../../components/SubmitResult";
+import GlassSurface from "../../components/GlassSurface";
 
 function getReykjavikHour(): number {
   const now = new Date();
@@ -215,7 +216,7 @@ export default function QueueScreen() {
     return (
       <SafeAreaView style={s.container}>
         <View style={s.center}>
-          <ActivityIndicator color="#00D26A" size="large" />
+          <ActivityIndicator color="#7FD9A8" size="large" />
         </View>
       </SafeAreaView>
     );
@@ -226,7 +227,7 @@ export default function QueueScreen() {
       <SafeAreaView style={s.container}>
         <View style={s.center}>
           <Text style={[s.mutedText, { marginBottom: 12 }]}>Signing in...</Text>
-          <ActivityIndicator color="#00D26A" size="small" />
+          <ActivityIndicator color="#7FD9A8" size="small" />
           <View style={{ marginTop: 30 }}>
             <Button
               title="Sign Out"
@@ -255,10 +256,10 @@ export default function QueueScreen() {
           <Text style={s.mutedText}>Registration opens at</Text>
           <Text style={[s.whiteText, { fontSize: 36, fontWeight: "800", marginVertical: 4 }]}>11:00</Text>
           <Text style={[s.mutedText, { fontSize: 13, marginBottom: 24 }]}>Europe/Reykjavik</Text>
-          <View style={s.card}>
+          <GlassSurface style={s.card} fallbackStyle={s.cardFallback}>
             <Text style={[s.mutedText, { fontSize: 11, letterSpacing: 2, marginBottom: 8 }]}>OPENS IN</Text>
-            <Text style={{ color: "#00D26A", fontSize: 28, fontWeight: "700", fontVariant: ["tabular-nums"] }}>{countdown}</Text>
-          </View>
+            <Text style={{ color: "#7FD9A8", fontSize: 28, fontWeight: "700", fontVariant: ["tabular-nums"] }}>{countdown}</Text>
+          </GlassSurface>
         </View>
       </SafeAreaView>
     );
@@ -266,7 +267,7 @@ export default function QueueScreen() {
 
   // Pool open state
   return (
-    <SafeAreaView style={s.container}>
+    <SafeAreaView style={s.container} edges={["top", "left", "right"]}>
       <View style={s.header}>
         <Text style={s.headerTitle}>Pool</Text>
         {season && <Text style={[s.mutedText, { fontSize: 13 }]}>{season.name}</Text>}
@@ -311,12 +312,12 @@ export default function QueueScreen() {
               <Text style={s.primaryButtonText}>{joining ? "Registering..." : "Register"}</Text>
             </Pressable>
           ) : (
-            <View style={[s.card, { alignItems: "center" }]}>
-              <Text style={{ color: "#00D26A", fontSize: 16, fontWeight: "600" }}>You're registered</Text>
+            <GlassSurface style={[s.card, { alignItems: "center" }]} fallbackStyle={s.cardFallback}>
+              <Text style={{ color: "#7FD9A8", fontSize: 16, fontWeight: "600" }}>You're registered</Text>
               <Pressable onPress={handleLeave} style={{ marginTop: 12 }}>
-                <Text style={{ color: "#EF4444", fontSize: 14 }}>Unregister</Text>
+                <Text style={{ color: "#D97070", fontSize: 14 }}>Unregister</Text>
               </Pressable>
-            </View>
+            </GlassSurface>
           )}
         </View>
       )}
@@ -353,37 +354,47 @@ export default function QueueScreen() {
 }
 
 const s = StyleSheet.create({
-  container: { flex: 1, backgroundColor: "#121212" },
+  container: { flex: 1, backgroundColor: "#171B22" },
   center: { flex: 1, alignItems: "center", justifyContent: "center", paddingHorizontal: 32 },
   header: { paddingHorizontal: 24, paddingTop: 16, paddingBottom: 12 },
-  headerTitle: { color: "#fff", fontSize: 24, fontWeight: "700" },
-  whiteText: { color: "#fff" },
-  mutedText: { color: "#888", fontSize: 14 },
-  card: { backgroundColor: "#2A2A2A", borderRadius: 16, padding: 20, width: "100%" },
-  primaryButton: {
-    backgroundColor: "#00D26A",
-    paddingVertical: 16,
-    borderRadius: 14,
-    alignItems: "center",
+  headerTitle: { color: "#E8E8E8", fontSize: 24, fontWeight: "700" },
+  whiteText: { color: "#E8E8E8" },
+  mutedText: { color: "#9CA3AF", fontSize: 14 },
+  card: {
+    borderRadius: 20,
+    padding: 20,
+    width: "100%",
+    overflow: "hidden",
   },
-  primaryButtonText: { color: "#fff", fontWeight: "700", fontSize: 17 },
-  accentButton: {
-    backgroundColor: "#FFB800",
-    paddingVertical: 14,
-    borderRadius: 14,
-    alignItems: "center",
-  },
-  accentButtonText: { color: "#121212", fontWeight: "700", fontSize: 16 },
-  rejectButton: {
-    backgroundColor: "#1E1E1E",
+  cardFallback: {
+    backgroundColor: "rgba(42, 46, 52, 0.75)",
     borderWidth: 1,
-    borderColor: "#EF4444",
+    borderColor: "rgba(255,255,255,0.06)",
+  },
+  primaryButton: {
+    backgroundColor: "rgba(127, 217, 168, 0.85)",
+    paddingVertical: 16,
+    borderRadius: 999,
+    alignItems: "center",
+  },
+  primaryButtonText: { color: "#171B22", fontWeight: "700", fontSize: 17 },
+  accentButton: {
+    backgroundColor: "rgba(212, 180, 117, 0.92)",
+    paddingVertical: 14,
+    borderRadius: 999,
+    alignItems: "center",
+  },
+  accentButtonText: { color: "#171B22", fontWeight: "700", fontSize: 16 },
+  rejectButton: {
+    backgroundColor: "rgba(217, 112, 112, 0.08)",
+    borderWidth: 1,
+    borderColor: "rgba(217, 112, 112, 0.5)",
     paddingVertical: 12,
-    borderRadius: 12,
+    borderRadius: 999,
     alignItems: "center",
   },
   rejectButtonText: {
-    color: "#EF4444",
+    color: "#D97070",
     fontWeight: "700",
     fontSize: 15,
   },

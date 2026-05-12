@@ -1,4 +1,5 @@
-import { View, Text, FlatList, Image, Pressable, StyleSheet } from "react-native";
+import { View, Text, FlatList, Image, Pressable, StyleSheet, Platform } from "react-native";
+import GlassSurface from "./GlassSurface";
 import { displayName } from "../lib/types";
 import type { LeaderboardEntry } from "../lib/types";
 
@@ -18,9 +19,9 @@ function LeaderboardRow({
   onPress?: () => void;
 }) {
   const streakColor = entry.streak.startsWith("W")
-    ? "#00D26A"
+    ? "#7FD9A8"
     : entry.streak.startsWith("L")
-      ? "#EF4444"
+      ? "#D97070"
       : "#6B7280";
 
   const avatarUri =
@@ -28,34 +29,36 @@ function LeaderboardRow({
     `https://ui-avatars.com/api/?name=${encodeURIComponent(entry.player.name)}&background=2A2A2A&color=fff`;
 
   return (
-    <Pressable
-      onPress={onPress}
-      style={[
-        styles.row,
-        isCurrentPlayer ? styles.rowCurrentPlayer : styles.rowDefault,
-      ]}
-    >
-      <Text
-        style={[
-          styles.rankText,
-          entry.rank <= 3 ? styles.textAccent : styles.textGray400,
-        ]}
-      >
-        {entry.rank}
-      </Text>
-      <Image source={{ uri: avatarUri }} style={styles.avatar} />
-      <Text style={styles.playerName} numberOfLines={1}>
-        {displayName(entry.player)}
-      </Text>
-      <Text style={styles.eloText}>{entry.elo}</Text>
-      <Text style={styles.winsText}>{entry.wins}W</Text>
-      <Text style={styles.lossesText}>{entry.losses}L</Text>
-      <Text style={styles.winPctText}>{entry.winPct}%</Text>
-      <Text style={[styles.streakText, { color: streakColor }]}>
-        {entry.streak || "-"}
-      </Text>
-      <Text style={styles.avgGoalsText}>{entry.avgGoals.toFixed(1)}</Text>
-    </Pressable>
+    <View style={[styles.rowWrap, isCurrentPlayer && styles.rowCurrentBorder]}>
+      <GlassSurface
+        style={StyleSheet.absoluteFill}
+        fallbackStyle={isCurrentPlayer ? styles.rowCurrentFallback : styles.rowDefaultFallback}
+        tintColor={isCurrentPlayer ? "rgba(127, 217, 168, 0.18)" : undefined}
+        pointerEvents="none"
+      />
+      <Pressable onPress={onPress} style={styles.rowPressable}>
+        <Text
+          style={[
+            styles.rankText,
+            entry.rank <= 3 ? styles.textAccent : styles.textGray400,
+          ]}
+        >
+          {entry.rank}
+        </Text>
+        <Image source={{ uri: avatarUri }} style={styles.avatar} />
+        <Text style={styles.playerName} numberOfLines={1}>
+          {displayName(entry.player)}
+        </Text>
+        <Text style={styles.eloText}>{entry.elo}</Text>
+        <Text style={styles.winsText}>{entry.wins}W</Text>
+        <Text style={styles.lossesText}>{entry.losses}L</Text>
+        <Text style={styles.winPctText}>{entry.winPct}%</Text>
+        <Text style={[styles.streakText, { color: streakColor }]}>
+          {entry.streak || "-"}
+        </Text>
+        <Text style={styles.avgGoalsText}>{entry.avgGoals.toFixed(1)}</Text>
+      </Pressable>
+    </View>
   );
 }
 
@@ -88,6 +91,7 @@ export default function LeaderboardTable({
             onPress={() => onPlayerPress?.(item.player.id)}
           />
         )}
+        contentContainerStyle={Platform.OS === "ios" ? styles.listContent : undefined}
         showsVerticalScrollIndicator={false}
       />
     </View>
@@ -114,22 +118,33 @@ const styles = StyleSheet.create({
     width: 36,
     marginLeft: 4,
   },
-  row: {
+  rowWrap: {
+    marginHorizontal: 16,
+    marginBottom: 6,
+    borderRadius: 14,
+    overflow: "hidden",
+  },
+  rowPressable: {
     flexDirection: "row",
     alignItems: "center",
     paddingHorizontal: 16,
     paddingVertical: 12,
-    marginHorizontal: 16,
-    marginBottom: 6,
-    borderRadius: 12,
   },
-  rowDefault: {
-    backgroundColor: "#2A2A2A",
-  },
-  rowCurrentPlayer: {
-    backgroundColor: "rgba(0, 210, 106, 0.15)",
+  rowDefaultFallback: {
+    backgroundColor: "rgba(42, 46, 52, 0.7)",
     borderWidth: 1,
-    borderColor: "#00D26A",
+    borderColor: "rgba(255,255,255,0.06)",
+    borderRadius: 14,
+  },
+  rowCurrentFallback: {
+    backgroundColor: "rgba(127, 217, 168, 0.12)",
+    borderWidth: 1,
+    borderColor: "rgba(127, 217, 168, 0.4)",
+    borderRadius: 14,
+  },
+  rowCurrentBorder: {
+    borderWidth: 1,
+    borderColor: "rgba(127, 217, 168, 0.45)",
   },
   rankText: {
     width: 32,
@@ -138,7 +153,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
   },
   textAccent: {
-    color: "#FFB800",
+    color: "#D4B475",
   },
   textGray400: {
     color: "#9CA3AF",
@@ -149,17 +164,17 @@ const styles = StyleSheet.create({
     borderRadius: 9999,
     marginLeft: 4,
     borderWidth: 1,
-    borderColor: "#333333",
+    borderColor: "rgba(255,255,255,0.12)",
   },
   playerName: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontWeight: "600",
     fontSize: 14,
     marginLeft: 8,
     flex: 1,
   },
   eloText: {
-    color: "#00D26A",
+    color: "#7FD9A8",
     fontWeight: "700",
     fontSize: 14,
     width: 48,
@@ -216,5 +231,8 @@ const styles = StyleSheet.create({
   },
   textRight: {
     textAlign: "right",
+  },
+  listContent: {
+    paddingBottom: 130,
   },
 });

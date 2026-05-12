@@ -83,14 +83,14 @@ const styles = StyleSheet.create({
     justifyContent: "center",
   },
   teamName: {
-    color: "#fff",
+    color: "#E8E8E8",
     fontSize: 14,
     fontWeight: "700",
     marginTop: 6,
     textAlign: "center",
   },
   animatingText: {
-    color: "#00D26A",
+    color: "#7FD9A8",
     fontSize: 16,
   },
   leagueName: {
@@ -103,8 +103,8 @@ const styles = StyleSheet.create({
     marginTop: 8,
     paddingHorizontal: 12,
     paddingVertical: 4,
-    backgroundColor: "#333333",
-    borderRadius: 8,
+    backgroundColor: "rgba(255,255,255,0.08)",
+    borderRadius: 999,
   },
   rerollText: {
     color: "#9CA3AF",
